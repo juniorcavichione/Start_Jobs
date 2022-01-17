@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Start-Jobs/index.php
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
