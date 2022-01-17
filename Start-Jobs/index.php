@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67563509ec0d39e36ffe95d7a99855483b6b45f7
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -46,19 +49,7 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Start Jobs<br />
-											Sua busca pelo emprego, num clique!</h1>
-											<p>Site responsível</p>
-										</header>
-										<p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
-										<p>Temos vagas de:</p>
-										<ul>
-											<li>Informática | TI</li>
-											<li>Logística</li>
-											<li>Administração</li>
-											<li>Serviços</li>
-											<li>Free Lancer</li>
-										</ul>
+									normalizer_get_raw_decomposition
 										<ul class="actions">
 											<li><a href="vagas.php" class="button big">Página de vagas</a></li>
 										</ul>
