@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Start-Jobs/index.php
+
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -50,9 +50,17 @@
 											Sua busca pelo emprego, num clique!</h1>
 											<p>Site responsível</p>
 										</header>
-										<p>Texto da página principal, aqui pode inserir um texto falando sobre o que é o site, propósito, entre outras coisas, é expansível, quanto mais coisas inserirmos aqui no texto mais ele expande a imagem ao lado, é possível remover a imagem tmb e deixar apenas o texto, mas a imagem em si da um destaque legal.</p>
+										<p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
+										<p>Temos vagas de:</p>
+										<ul>
+											<li>Informática | TI</li>
+											<li>Logística</li>
+											<li>Administração</li>
+											<li>Serviços</li>
+											<li>Free Lancer</li>
+										</ul>
 										<ul class="actions">
-											<li><a href="#" class="button big">Botão na UL > LI > A</a></li>
+											<li><a href="vagas.php" class="button big">Página de vagas</a></li>
 										</ul>
 									</div>
 									<span class="image object">
@@ -174,8 +182,8 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Página Inicial</a></li>
-										<li><a href="vagas.html">Vagas</a></li>
+										<li><a href="index.php">Página Inicial</a></li>
+										<li><a href="vagas.php">Vagas</a></li>
 										<li>
 											<span class="opener">Vagas por área</span>
 											<ul>
@@ -185,10 +193,10 @@
 												<li><a href="#">Serviços Gerais</a></li>
 											</ul>
 										</li>
-										<li><a href="dicas.html">Dicas</a></li>
-									  <li><a href="sobre.html">Sobre</a></li>
-										<li><a href="noticias.html">Noticias</a></li>
-										<li><a href="contato.html">Fale Conosco</a></li>
+										<li><a href="dicas.php">Dicas</a></li>
+									  <li><a href="sobre.php">Sobre</a></li>
+										<li><a href="noticias.php">Noticias</a></li>
+										<li><a href="contato.php">Fale Conosco</a></li>
 									</ul>
 								</nav>
 

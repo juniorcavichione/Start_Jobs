@@ -92,8 +92,8 @@
 									<h2>Menu</h2>
 								</header>
 								<ul>
-									<li><a href="index.html">Página Inicial</a></li>
-									<li><a href="vagas.html">Vagas</a></li>
+									<li><a href="index.php">Página Inicial</a></li>
+									<li><a href="vagas.php">Vagas</a></li>
 									<li>
 										<span class="opener">Vagas por área</span>
 										<ul>
@@ -103,10 +103,10 @@
 											<li><a href="#">Serviços Gerais</a></li>
 										</ul>
 									</li>
-									<li><a href="dicas.html">Dicas</a></li>
-									<li><a href="sobre.html">Sobre</a></li>
-									<li><a href="noticias.html">Noticias</a></li>
-									<li><a href="contato.html">Fale Conosco</a></li>
+									<li><a href="dicas.php">Dicas</a></li>
+									<li><a href="sobre.php">Sobre</a></li>
+									<li><a href="noticias.php">Noticias</a></li>
+									<li><a href="contato.php">Fale Conosco</a></li>
 								</ul>
 							</nav>
 
