@@ -16,6 +16,7 @@
   <meta name="description" content="Encontre seu emprego aqui de forma totalmente gratuita">
   <!-- Palavras chaves Quanto menos palavras chaves melhor-->
   <meta name="keywords" content="Emprego, Trabalho">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<title>Start_Jobs</title>
 		<!-- Inserindo o Favicon -->
@@ -30,17 +31,21 @@
 					<div id="main">
 						<div class="inner">
 
+						
+
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Start_<span style="color: #2c76ee">Jobs</span></strong></a>
+
+									<a href="index.php" class="logo"><strong>Start_<span style="color: #2c76ee">Jobs</span></strong></a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										
+										<li><a href="vagas.php" class="button big">Login</a></li>										
+																				
 									</ul>
-								</header>
+								</header>								
 
 							<!-- Banner -->
 								<section id="banner">
@@ -508,6 +513,8 @@
 			</div>
 
 		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
@@ -515,5 +522,5 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
->>>>>>> 1751641efc591d00d455301d0ff48dbc370026e7:Start-Jobs/index.html
+
 </html>
