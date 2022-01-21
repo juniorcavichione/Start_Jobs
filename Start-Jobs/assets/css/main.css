@@ -2107,13 +2107,14 @@ button,
         right: -0.5em;
         top: 0; } }
 
-/* Banner */
+/* Banner
 #banner {
   padding: 6em 0 4em 0 ;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
-  display: flex; }
+  display: flex;
+ }
   #banner h1 {
     margin-top: -0.125em; }
   #banner .content {
@@ -2125,7 +2126,8 @@ button,
     -webkit-flex-shrink: 1;
     -ms-flex-shrink: 1;
     flex-shrink: 1;
-    width: 50%; }
+    width: 50%; 
+  }
   #banner .image {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -2148,7 +2150,7 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center;
-      width: 100%; }
+      width: 100%; } */
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
