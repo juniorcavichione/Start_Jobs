@@ -28,7 +28,7 @@
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									
+										<li><a href="login.html" id="login" class="button big">Login</a></li>
 									</ul>
 								</header>
 
