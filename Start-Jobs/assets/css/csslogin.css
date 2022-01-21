@@ -1,11 +1,11 @@
 body {
-    background-color: #19123B
+    background-color: #2C76EE
 }
 
 .card {
     border: none;
     border-top: 5px solid rgb(176, 106, 252);
-    background: #212042;
+    background: #2C76EE;
     color: #57557A
 }
 
