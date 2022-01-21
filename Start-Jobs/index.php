@@ -73,104 +73,22 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+										<!-- <img src="images/pic10.jpg" alt="" /> -->
 									</span>
 								</section>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Conteúdo dentro da Sessão > Article</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Indicador 1</h3>
-												<p>Texto do indicador 1</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Indicador 2</h3>
-												<p>Texto do indicador 2</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Indicador 3</h3>
-												<p>Texto do indicador 3</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Indicador 4</h3>
-												<p>Texto do indicador 4</p>
-											</div>
-										</article>
-									</div>
-								</section>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Titulo de outra sessão</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Subtitulo 1 para a imagem acima</h3>
-											<p>Texto relativo ao subtitulo 1 da imagem acima</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Botão Subtitulo 1</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Subtitulo 2 para a imagem acima</h3>
-											<p>Texto relativo ao subtitulo 2 da imagem acima.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Botão Subtitulo 2</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Subtitulo 3 para a imagem acima</h3>
-											<p>Texto relativo ao subtitulo 3 da imagem acima.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Botão Subtitulo 3</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Subtitulo 4 para a imagem acima</h3>
-											<p>Texto relativo ao subtitulo 4 da imagem acima.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Botão Subtitulo 4</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Subtitulo 5 para a imagem acima</h3>
-											<p>Texto relativo ao subtitulo 5 da imagem acima.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Botão Subtitulo 5</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Subtitulo 6 para a imagem acima</h3>
-											<p>Texto relativo ao subtitulo 6 da imagem acima.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">Botão Subtitulo 6</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
+								<hr>
+								<!-- VAGAS  BACK-END -->
+<h2>Vagas AQUI!</h2>
 
+
+
+
+
+
+
+							
 						</div>
 					</div>
 
