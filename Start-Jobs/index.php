@@ -49,8 +49,6 @@
 									</ul>
 								</header>		
 								
-
-
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
@@ -212,24 +210,24 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2>Parceiros</h2>
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											<a href="https://www.americanas.com.br/" target="_Blank" class="image"><img src="images/americanas.png" alt="Imagem ficticia apenas para direcionar para a página da Americanas" /></a>
+											<p>Americanas tem de tudo a toda hora. em qualquer lugar.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											<a href="https://g1.globo.com/" target="_Blank" class="image"><img src="images/g1.jpg" alt="Imagem Ficticia apenas para direcionar para a página do G1" /></a>
+											<p>G1 o Site completo de notícias na dose certa para o seu dia a dia.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										<a href="https://faucetcrypto.com/ref/1251908" target="_Blank" class="image"><img src="images/faucet.png" alt="Site de recompensas de criptomoedas" /></a>
+											<p>Faucet Crypto realize pequenas tarefas e seja recompensado com a moeda nativa do site e resgaste por criptomoedas conhecidas "BTC, ETH, DOGE, LTC, entre outras...</p>
 										</article>
 									</div>
 									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
+										<li><a href="#" class="button">Outros parceiros</a></li>
 									</ul>
 								</section>
 
