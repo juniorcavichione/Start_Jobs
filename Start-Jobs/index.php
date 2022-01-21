@@ -130,24 +130,24 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2>Parceiros</h2>
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											<a href="https://www.americanas.com.br/" class="image"><img src="images/americanas.png" alt="Site de compras Americanas" /></a>
+											<p>americanas tem de tudo a toda hora. em qualquer lugar :)</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											<a href="https://faucetcrypto.com/ref/1251908" class="image"><img src="images/faucet.png" alt="Ganhe Criptomoedas Grátis"/></a>
+											<p>Realize pequenas tarefas e Claims de 30 em 30 minutos e ganhe coins e troque por criptomoedas, pagamos diretamente na sua carteira/wallet.</p>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+											<a href="https://g1.globo.com/" class="image"><img src="images/G1.jpg" alt="Maior portal de notícias do Brasil" /></a>
+											<p>Últimas notícias do Brasil e do mundo, sobre política, economia, emprego, educação, saúde, meio ambiente, tecnologia, ciência, cultura e carros.</p>
 										</article>
 									</div>
 									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
+										<li><a href="#" class="button">Mais Parceiros</a></li>
 									</ul>
 								</section>
 
