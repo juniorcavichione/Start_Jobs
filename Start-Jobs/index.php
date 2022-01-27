@@ -35,12 +35,11 @@
 
 							<!-- Header -->
 								<header id="header">
-
 									<a href="index.php" class="logo"><strong>Start_<span style="color: #2c76ee">Jobs</span></strong></a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="login.html" id="login" class="button big">Login</a></li>
 										
@@ -149,7 +148,7 @@
 										<header class="major">
 											<h2>Fale Conosco</h2>
 										</header>
-										<p>Tem dúvidas os serviços que prestamos, entre em contato conosco.</p>
+										<p>Tem dúvidas sobre os serviços que prestamos, entre em contato conosco.</p>
 										<ul class="contact">
 											<li class="icon solid fa-envelope"><a href=mailto:penha@sp.senac.br?subject="link HTML">penha@sp.senac.br</a></li>
 											<li class="icon solid fa-phone">(011) 2135-0300</li>

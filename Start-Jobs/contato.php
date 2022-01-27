@@ -22,7 +22,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="elements.html" class="logo"><strong>Fale Conosco - Equipe Start_Jobs</strong></a>
+								<a href="index.php" class="logo"><strong>Start_<span style="color: #2c76ee">Jobs</span></strong></a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -502,7 +502,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 										<header class="major">
 											<h2>Fale Conosco</h2>
 										</header>
-										<p>Tem dúvidas os serviços que prestamos, entre em contato conosco.</p>
+										<p>Tem dúvidas sobre os serviços que prestamos, entre em contato conosco.</p>
 										<ul class="contact">
                     <li class="icon solid fa-envelope"><a href=mailto:penha@sp.senac.br?subject="link HTML">penha@sp.senac.br</a></li>
 											<li class="icon solid fa-phone">(011) 2135-0300</li>
