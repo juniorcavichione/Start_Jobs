@@ -15,7 +15,7 @@
                 <h2>Menu</h2>
             </header>
             <ul>
-                <li><a href="index.php">Página Inicial</a></li>
+                <li><a href="../">Página Inicial</a></li>
                 <li><a href="vagas.php">Vagas</a></li>
                 <li>
                     <span class="opener">Vagas por área</span>

@@ -23,36 +23,19 @@
 					</ul>
 				</header>
 
-				<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h1>Start Jobs<br />
-								Sua busca pelo emprego, num clique!</h1>
-							<p>Site responsível</p>
-						</header>
-						<p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
-						<p>Temos vagas de:</p>
-						<ul>
-							<li>Informática | TI</li>
-							<li>Logística</li>
-							<li>Administração</li>
-							<li>Serviços</li>
-							<li>Free Lancer</li>
-						</ul>
-						<ul class="actions">
-							<li><a href="vagas.php" class="button big">Página de vagas</a></li>
-						</ul>
-					</div>
-					<span class="image object">
-						<!-- <img src="images/pic10.jpg" alt="" /> -->
-					</span>
-				</section>
-
-				<hr>
-				<!-- VAGAS  BACK-END -->
-				<h2>Vagas</h2>
-
+				<?php 
+				if(isset($_GET['minha-conta'])){
+					include("minha-conta.php");
+				} if(isset($_GET['editar-conta'])){
+					include("editar-conta.php");
+				}if(isset($_GET['minha-vaga'])){
+					include("minha-vaga.php");
+				} if(isset($_GET['excluir-conta'])){
+					include("excluir-conta.php");
+				}
+				
+				?>
+			
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php');?>
