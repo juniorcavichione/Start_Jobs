@@ -23,7 +23,6 @@
 					</ul>
 				</header>
 
-			
 				<!--====================================================
 				  LOGAR OU REGISTRAR
 				  ======================================================-->
@@ -46,18 +45,16 @@
 											<input type="password" class="form-control rounded-4" id="floatingPassword">
 											<label for="floatingPassword">Senha</label>
 										</div>
-										<button class="w-100 mb-2 btn btn-lg rounded-4" name="entrar"
+										<button class="button primary fit mb-3" name="entrar"
 											type="submit">Logar</button>
 										<hr class="my-4">
 
-										<h2 class="fs-5 fw-bold mb-3">Ou tambem pode</h2>
-										<button id="login_vai_recupera"
-											class="w-100 py-2 mb-2 btn btn-outline rounded-4" type="button">
+										<h2 class="fs-5 fw-bold">Ou tambem pode</h2>
+										<button id="login_vai_recupera" class="button primary fit mb-3" type="button">
 
 											Recupere a senha
 										</button>
-										<button id="login_vai_registrar"
-											class="w-100 py-2 mb-2 btn btn-outline rounded-4" type="button">
+										<button id="login_vai_registrar" class="button primary fit" type="button">
 
 											Cadastre se
 										</button>
@@ -76,19 +73,17 @@
 											<input type="email" class="form-control rounded-4" id="email">
 											<label for="email">Email </label>
 										</div>
-										<button class="w-100 btn btn-lg rounded-4 btn" name="entrar"
+										<button class="button primary fit" name="entrar"
 											type="submit">Recuperar</button>
 										<hr class="my-4">
 
 										<h2 class="fs-5 fw-bold mb-3">Ou tambem pode</h2>
-										<button id="recupera_voltar_logar"
-											class="w-100 py-2 mb-2 btn btn-outline rounded-4" type="button">
-											<svg class="bi me-1" width="16" height="16">
-												<use xlink:href="#twitter" /></svg>
+										<button id="recupera_voltar_logar" class="button primary fit mb-3"
+											type="button">
+
 											Efetuar login
 										</button>
-										<button id="recupera_voltar_registro"
-											class="w-100 py-2 mb-2 btn btn-outline rounded-4" type="button">
+										<button id="recupera_voltar_registro" class="button primary fit" type="button">
 
 											Cadastre se
 										</button>
@@ -132,28 +127,20 @@
 										<div class="form-floating form-floating-inline mb-3">
 											<input type="radio" class="btn btn-outline" name="tipo" value="empresa"
 												id="success-outlined" autocomplete="off">
-											<label class="btn btn-outline" for="success-outlined">Cadastrar
-												vaga</label>
-
+											<label class="btn btn-outline" for="success-outlined">Cadastrar vaga</label>
 											<input type="radio" class="btn-check" name="tipo" value="comum"
 												id="danger-outlined" autocomplete="off">
 											<label class="btn btn-outline" for="danger-outlined">Cadastro
 												curriculo</label>
-											<button class="button primary fit"
-												name="inserir">Cadastre-se</button>
-												<hr class="my-4">
-
-											<small class="text-muted">Ao clicar em Cadastre-se, você concorda com os termos de uso.</small>
+											<button class="button primary fit" name="inserir">Cadastre-se</button>
 											<hr class="my-4">
-											
-											
-											<div class="col-12 col-12-small">
-											
-													<button id="registra_voltar_recupera" class="button mb-2 primary fit" type="button"> Recupere a senha</button>
-													
-														<button id="registra_voltar_logar" class="button primary fit" type="button">Efetuar login</button>
-													
-												
+											<small class="text-muted">Ao clicar em Cadastre-se, você concorda com os
+												termos de uso.</small>
+											<div class="col-12 col-12-small mt-3">
+												<button id="registra_voltar_recupera" class="button mb-2 primary fit"
+													type="button"> Recupere a senha</button>
+												<button id="registra_voltar_logar" class="button primary fit"
+													type="button">Efetuar login</button>
 											</div>
 										</div>
 
