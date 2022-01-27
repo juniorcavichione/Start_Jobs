@@ -481,7 +481,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 										<div class="mini-posts">
 											<article>
 												<a href="https://www.americanas.com.br/" class="image"><img src="images/americanas.png" alt="Site de compras Americanas" /></a>
-												<p>americanas tem de tudo a toda hora. em qualquer lugar :)</p>
+												<p>Americanas tem de tudo a toda hora. em qualquer lugar :)</p>
 											</article>
 											<article>
 												<a href="https://faucetcrypto.com/ref/1251908" class="image"><img src="images/faucet.png" alt="Ganhe Criptomoedas Grátis"/></a>
@@ -492,9 +492,9 @@ print 'It took ' + i + ' iterations to sort the deck.';
 												<p>Últimas notícias do Brasil e do mundo, sobre política, economia, emprego, educação, saúde, meio ambiente, tecnologia, ciência, cultura e carros.</p>
 											</article>
 										</div>
-										<ul class="actions">
+								<!-- 		<ul class="actions">
 											<li><a href="#" class="button">Mais Parceiros</a></li>
-										</ul>
+										</ul> -->
 									</section>
 
 								<!-- Section -->
