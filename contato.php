@@ -1,4 +1,4 @@
-<?php include_once('./includes/cabecalho.php')?>
+<?php include_once('./includes/cabecalho.php') ?>
 
 <body class="is-preload">
 
@@ -15,16 +15,15 @@
 					<ul class="icons">
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank"
-								class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="login.html" id="login" class="button big">Login</a></li>
 
 					</ul>
 				</header>
 
-					<!-- Content -->
-          <section>
+				<!-- Content -->
+				<section>
 					<header class="main">
 						<h1>Elements</h1>
 					</header>
@@ -133,18 +132,12 @@
 
 									<h4>Icons</h4>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span
-													class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span
-													class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span
-													class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span
-													class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span
-													class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span
-													class="label">Tumblr</span></a></li>
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
 									</ul>
 
 								</div>
@@ -365,12 +358,10 @@
 							<form method="post" action="#">
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value=""
-											placeholder="Name" />
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
 									</div>
 									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value=""
-											placeholder="Email" />
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
 									</div>
 									<!-- Break -->
 									<div class="col-12">
@@ -406,8 +397,7 @@
 									</div>
 									<!-- Break -->
 									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
-											rows="6"></textarea>
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
 									</div>
 									<!-- Break -->
 									<div class="col-12">
@@ -426,26 +416,17 @@
 							<span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
 							<div class="box alt">
 								<div class="row gtr-50 gtr-uniform">
-									<div class="col-4"><span class="image fit"><img src="images/pic01.jpg"
-												alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg"
-												alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg"
-												alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
 									<!-- Break -->
-									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg"
-												alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/pic01.jpg"
-												alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg"
-												alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 									<!-- Break -->
-									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg"
-												alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg"
-												alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/pic01.jpg"
-												alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
 								</div>
 							</div>
 
@@ -496,6 +477,6 @@ print 'It took ' + i + ' iterations to sort the deck.';
 
 			</div>
 		</div>
-		<?php include_once('./includes/sidebar.php');?>
+		<?php include_once('./includes/sidebar.php'); ?>
 	</div>
-	<?php include_once('./includes/footer.php');?>
+	<?php include_once('./includes/footer.php'); ?>
