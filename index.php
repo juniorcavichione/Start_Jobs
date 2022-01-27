@@ -1,4 +1,4 @@
-<?php ?>
+<?php include_once('./includes/cabecalho.php')?>
 
 <body class="is-preload">
 
