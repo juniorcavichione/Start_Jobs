@@ -28,7 +28,6 @@
 					<div class="content">
 						<header>
 							<h1>Minha conta</h1>
-							<p>Site responsível</p>
 						</header>
 						<p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
 						<p>Temos vagas de:</p>
@@ -42,10 +41,7 @@
 						<ul class="actions">
 							<li><a href="vagas.php" class="button big">Página de vagas</a></li>
 						</ul>
-					</div>
-					<span class="image object">
-						<!-- <img src="images/pic10.jpg" alt="" /> -->
-					</span>
+					</div>					
 				</section>
 			</div>
 		</div>
