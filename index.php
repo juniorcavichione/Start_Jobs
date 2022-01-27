@@ -57,4 +57,5 @@
 		</div>
 		<?php include_once('./includes/sidebar.php');?>
 	</div>
+	
 	<?php include_once('./includes/footer.php');?>

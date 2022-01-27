@@ -87,6 +87,7 @@
 				}
 			})(jQuery); // End of use strict
 		</script>
+		<script src="./assets/js/lgpd.js"></script>
 		</body>
 
 		</html>
