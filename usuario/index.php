@@ -27,8 +27,7 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h1>Start Jobs<br />
-								Sua busca pelo emprego, num clique!</h1>
+							<h1>Minha conta</h1>
 							<p>Site responsível</p>
 						</header>
 						<p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
@@ -48,11 +47,6 @@
 						<!-- <img src="images/pic10.jpg" alt="" /> -->
 					</span>
 				</section>
-
-				<hr>
-				<!-- VAGAS  BACK-END -->
-				<h2>Vagas</h2>
-
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php');?>
