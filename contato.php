@@ -25,17 +25,42 @@
 				<!-- Content -->
 				<section>
 					<header class="main">
-						<h1>Elements</h1>
+						<h1>Entre em contato</h1>
 					</header>
 
 					<!-- Content -->
 					<h2 id="content">Sample Content</h2>
-					<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac
-						adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis.
-						Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac
-						blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida
-						adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam
-						veroeros adipiscing.</p>
+					<form method="post" action="#">
+								<div class="row gtr-uniform">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>								
+									<!-- Break -->
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human</label>
+									</div>
+									<!-- Break -->
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<!-- Break -->
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+
 					<div class="row">
 						<div class="col-6 col-12-small">
 							<h3>Sem turpis amet semper</h3>
