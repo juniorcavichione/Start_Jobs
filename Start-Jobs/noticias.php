@@ -66,7 +66,7 @@
 
             <span class="image main"
               ><img
-                src="images/pic04.jpg"
+                src="images/plantao.jpg"
                 alt="Imagem Apenas para modificar depois ou nem precisamos de imagem nesta parte"
             /></span>
 
@@ -74,33 +74,21 @@
 
             <hr class="major" />
 
-            <h2>Notícias</h2>
+            <h2>Notícia Relevante</h2>
             <p>
-              Donec eget ex magna. Interdum et malesuada fames ac ante ipsum
-              primis in faucibus. Pellentesque venenatis dolor imperdiet dolor
-              mattis sagittis. Praesent rutrum sem diam, vitae egestas enim
-              auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit
-              amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a
-              elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris.
-              Curabitur sapien risus, commodo eget turpis at, elementum
-              convallis elit. Pellentesque enim turpis, hendrerit.
+            PIS/Pasep: trabalhador já pode consultar se tem direito ao abono.
+            </p>
+            <p>Pagamentos começam no dia 8 de fevereiro para profissionais da iniciativa privada e em 15 de fevereiro para os servidores públicos.</p>
+
+            <p>Fonte da informação: 
+              <a href="https://g1.globo.com/economia/noticia/2022/01/23/pispasep-2022-trabalhador-ja-pode-confirmar-se-tem-direito-ao-abono.ghtml" target="_blank">https://g1.globo.com/economia/noticia/2022/01/23/pispasep-2022-trabalhador-ja-pode-confirmar-se-tem-direito-ao-abono.ghtml</a>
             </p>
 
             <hr class="major" />
 
-            <h2>Notícias parte 2</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-              torquent per conubia nostra, per inceptos himenaeos. Etiam
-              tristique libero eu nibh porttitor fermentum. Nullam venenatis
-              erat id vehicula viverra. Nunc ultrices eros ut ultricies
-              condimentum. Mauris risus lacus, blandit sit amet venenatis non,
-              bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at,
-              euismod in lectus. Pellentesque habitant morbi tristique senectus
-              et netus et malesuada fames ac turpis egestas. In non lorem sit
-              amet elit placerat maximus. Pellentesque aliquam maximus risus,
-              vel sed vehicula.
+            <h2>Notícia sobre emprego</h2>
+            <p>Últimas noticías sobre emprego: 
+              <a href="https://jcconcursos.uol.com.br/noticia/empregos" target="_blank">https://jcconcursos.uol.com.br/noticia/empregos</a>
             </p>
 
             <hr class="major" />
