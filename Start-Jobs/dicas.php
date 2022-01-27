@@ -30,7 +30,7 @@
         <div class="inner">
           <!-- Header -->
           <header id="header">
-            <a href="dicas.html" class="logo">Dicas</a>
+          <a href="index.php" class="logo"><strong>Start_<span style="color: #2c76ee">Jobs</span></strong></a>
             <ul class="icons">
               <li>
                 <a href="#" class="icon brands fa-twitter"
@@ -202,79 +202,53 @@
             </ul>
           </nav>
 
-          <!-- Section -->
-          <section>
-            <header class="major">
-              <h2>Ante interdum</h2>
-            </header>
-            <div class="mini-posts">
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/pic07.jpg" alt=""
-                /></a>
-                <p>
-                  Aenean ornare velit lacus, ac varius enim lorem ullamcorper
-                  dolore aliquam.
-                </p>
-              </article>
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/pic08.jpg" alt=""
-                /></a>
-                <p>
-                  Aenean ornare velit lacus, ac varius enim lorem ullamcorper
-                  dolore aliquam.
-                </p>
-              </article>
-              <article>
-                <a href="#" class="image"
-                  ><img src="images/pic09.jpg" alt=""
-                /></a>
-                <p>
-                  Aenean ornare velit lacus, ac varius enim lorem ullamcorper
-                  dolore aliquam.
-                </p>
-              </article>
-            </div>
-            <ul class="actions">
-              <li><a href="#" class="button">More</a></li>
-            </ul>
-          </section>
+								<!-- Section -->
+                <section>
+										<header class="major">
+											<h2>Parceiros</h2>
+										</header>
+										<div class="mini-posts">
+											<article>
+												<a href="https://www.americanas.com.br/" class="image"><img src="images/americanas.png" alt="Site de compras Americanas" /></a>
+												<p>americanas tem de tudo a toda hora. em qualquer lugar :)</p>
+											</article>
+											<article>
+												<a href="https://faucetcrypto.com/ref/1251908" class="image"><img src="images/faucet.png" alt="Ganhe Criptomoedas Grátis"/></a>
+												<p>Realize pequenas tarefas e Claims de 30 em 30 minutos e ganhe coins e troque por criptomoedas, pagamos diretamente na sua carteira/wallet.</p>
+											</article>
+											<article>
+												<a href="https://g1.globo.com/" class="image"><img src="images/G1.jpg" alt="Maior portal de notícias do Brasil" /></a>
+												<p>Últimas notícias do Brasil e do mundo, sobre política, economia, emprego, educação, saúde, meio ambiente, tecnologia, ciência, cultura e carros.</p>
+											</article>
+										</div>
+										<ul class="actions">
+											<li><a href="#" class="button">Mais Parceiros</a></li>
+										</ul>
+									</section>
 
-          <!-- Section -->
-          <section>
-            <header class="major">
-              <h2>Get in touch</h2>
-            </header>
-            <p>
-              Sed varius enim lorem ullamcorper dolore aliquam aenean ornare
-              velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed
-              aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
-              tempus aliquam.
-            </p>
-            <ul class="contact">
-              <li class="icon solid fa-envelope">
-                <a href="#">information@untitled.tld</a>
-              </li>
-              <li class="icon solid fa-phone">(000) 000-0000</li>
-              <li class="icon solid fa-home">
-                1234 Somewhere Road #8254<br />
-                Nashville, TN 00000-0000
-              </li>
-            </ul>
-          </section>
+								<!-- Section -->
+									<section>
+										<header class="major">
+											<h2>Fale Conosco</h2>
+										</header>
+										<p>Tem dúvidas sobre os serviços que prestamos, entre em contato conosco.</p>
+										<ul class="contact">
+                    <li class="icon solid fa-envelope"><a href=mailto:penha@sp.senac.br?subject="link HTML">penha@sp.senac.br</a></li>
+											<li class="icon solid fa-phone">(011) 2135-0300</li>
+											<li class="icon solid fa-home">R. Francisco Coimbra, 403 - Penha de França, São Paulo - SP, 03639-000
+										</li>
+										</ul>
+									</section>
 
-          <!-- Footer -->
-          <footer id="footer">
-            <p class="copyright">
-              &copy; Untitled. All rights reserved. Demo Images:
-              <a href="https://unsplash.com">Unsplash</a>. Design:
-              <a href="https://html5up.net">HTML5 UP</a>.
-            </p>
-          </footer>
-        </div>
-      </div>
-    </div>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Diretos reservado: Alunos Senac Penha - Desenvolvedor Web Full Stack<p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
