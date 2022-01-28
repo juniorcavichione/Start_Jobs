@@ -83,7 +83,7 @@ if (isset($_POST['enviar'])) {
 					<form method="post" action="#">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall">
-								<input type="text" name="nome" id="demo-name" value="" />
+								<input type="text" name="nome" id="demo-name" value="" placeholder="Nome completo"/>
 							</div>
 							<div class="col-6 col-12-xsmall">
 								<input type="email" name="email" id="demo-email" value="" placeholder="Email" />
@@ -94,13 +94,12 @@ if (isset($_POST['enviar'])) {
 							</div>
 							<!-- Break -->
 							<div class="col-12">
-								<textarea name="mensagem" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+								<textarea name="mensagem" id="demo-message" placeholder="Escreva sua mensagem" rows="6"></textarea>
 							</div>
 							<!-- Break -->
 							<div class="col-12">
 								<ul class="actions">
 									<li><input type="submit" value="Enviar mensagem" name="enviar" class="primary" /></li>
-									<li><input type="reset" value="Reset" /></li>
 								</ul>
 							</div>
 						</div>
