@@ -16,9 +16,9 @@
 								class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						<?php if(!isset($_SESSION['usuario'])){
-							echo "<li><a href='login.html' id='login' class='button big'>Sair</a></li>";
+							echo "<li><a href='index.php' id='login' class='button big'>Sair</a></li>";
 							}else{
-								echo "<li><a href='login.html' id='login' class='button big'>Login</a></li>";
+								echo "<li><a href='index.php' id='login' class='button big'>Login</a></li>";
 							}?>
 					</ul>
 				</header>
