@@ -1,6 +1,10 @@
 <?php 
 require_once "src/Acesso.php";
 $sessao = new Acesso;
+
+if(isset($_GET['sair'])){
+	$sessao->logout();
+}
 ?>
 <!DOCTYPE HTML>
 <html>

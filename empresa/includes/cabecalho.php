@@ -2,6 +2,10 @@
 require_once "../src/Acesso.php";
 $sessao = new Acesso;
 $sessao->verificaPermissao();
+
+if(isset($_GET['sair'])){
+	$sessao->logout();
+}
 ?>
 <!DOCTYPE HTML>
 <html>
