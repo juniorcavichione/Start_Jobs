@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once('./includes/cabecalho.php');
 
@@ -7,11 +7,11 @@ require_once "src/Usuario.php";
 
 $sessao = new Acesso;
 
-if($_SESSION['tipo'] != ""){
+if ($_SESSION['tipo'] != "") {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	echo "<script>window.open('index.php','_self')</script>";
-  }
-  
+}
+
 ?>
 
 <body class="is-preload">
@@ -21,7 +21,7 @@ if($_SESSION['tipo'] != ""){
 		<div id="main">
 			<div class="inner">
 				<!-- Header -->
-				<?php include "includes/header.php"?>
+				<?php include "includes/header.php" ?>
 
 				<!--====================================================
 				  LOGAR OU REGISTRAR
@@ -33,22 +33,58 @@ if($_SESSION['tipo'] != ""){
 								<h2 class="text-center fw-bold mb-0">Entre ou se Cadastre</h2>
 							</div>
 							<div id="div-forms">
-								<?php if(isset($_POST['entrar'])){
-										echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
+								<?php if (isset($_POST['entrar'])) {
+									$usuario = new Usuario;
+									$usuario->setEmail($_POST['email']);
+									$dados = $usuario->buscaUsuario();
 
-								} ?>
+									var_dump($_POST['senha']);
+									//se foi localizado um usuario pelo email
 
+									if ($dados != null) {
+										//então verificamos a senha digitada com o banco
+										if (password_verify($_POST['senha'], $dados['senha'])) {
+											$sessao = new Acesso;
+											$sessao->login($dados['id'], $dados['nome'], $dados['tipo'], $dados['Img']);
+										} else {
+											//se a senha for diferente não loga
+											//header("location:logar.php?senha_incorreta");
+											$mensagem = "Senha incorreta";
+											$mensagem;
+										}
+									} else {
+										//header("location:logar.php?nao_encontrado");
+										$mensagem = "Usuario nao encontrado";
+										$mensagem;
+									}
+
+
+									//echo "<script>alert('estou aqui')</script>";
+								} else {
+									$mensagem = "nao foi possivel logar";
+									$mensagem;
+								}
+								$mensagem = "Digite usuario e senha";
+								$mensagem;
+								?>
 
 								<form id="login-form" method="POST">
 									<h3 class="text-center">Login</h3>
+									
 									<div class="modal-body pt-0">
-
+									<?php if (isset($mensagem)) { ?>
+									<p class="alert alert-success">
+										<?= $mensagem ?>
+									</p>
+									<?php } var_dump($_SESSION['tipo']);
+?>
 										<div class="form-floating mb-3">
 											<input type="email" class="form-control rounded-4" id="email">
 											<label for="email">Email </label>
 										</div>
 										<div class="form-floating mb-3">
-											<input type="password" class="form-control rounded-4" id="floatingPassword">
+											<input type="password" class="form-control rounded-4" name="senha"
+												id="floatingPassword">
 											<label for="floatingPassword">Senha</label>
 										</div>
 										<button class="button primary fit mb-3" name="entrar"
@@ -161,6 +197,6 @@ if($_SESSION['tipo'] != ""){
 				</section>
 			</div>
 		</div>
-		<?php include_once('./includes/sidebar.php');?>
+		<?php include_once('./includes/sidebar.php'); ?>
 	</div>
-	<?php include_once('./includes/footer.php');?>
+	<?php include_once('./includes/footer.php'); ?>
