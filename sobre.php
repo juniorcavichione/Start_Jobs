@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!--
 	Editorial by HTML5 UP
@@ -58,6 +59,35 @@
 
           <!-- Content -->
           <section>
+=======
+<?php include_once('./includes/cabecalho.php')?>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.php" class="logo"><strong>Start_<span style="color: #2c76ee">Jobs</span></strong></a>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank"
+								class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="login.html" id="login" class="button big">Login</a></li>
+
+					</ul>
+				</header>
+
+				<!-- Content -->
+				<section>
+>>>>>>> d00d4c2b554c747a734291e65268d0a82f8f92f6
             <header class="main">
               <h1>Sobre</h1>
             </header>
@@ -109,6 +139,7 @@
 
 
            </section>
+<<<<<<< HEAD
         </div>
       </div>
 
@@ -233,3 +264,11 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+=======
+
+			</div>
+		</div>
+		<?php include_once('./includes/sidebar.php');?>
+	</div>
+	<?php include_once('./includes/footer.php');?>
+>>>>>>> d00d4c2b554c747a734291e65268d0a82f8f92f6
