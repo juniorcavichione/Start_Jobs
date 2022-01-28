@@ -11,7 +11,7 @@ require_once "src/Usuario.php";
 		<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
 		<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 		<li><?php if($_SESSION['tipo'] != ""){
-			echo "<a href='entrar-registrar.php' id='login' class='button big'>Entrar / Registrar</a>";
+			echo "<a href='entrar-registrar.php' id='login' class='button big'>Sair / Registrar</a>";
 			}else{
 				echo "<a href='entrar-registrar.php' id='login' class='button big'>Sair / Registrar</a>";
 			}?></li>
