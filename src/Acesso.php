@@ -15,7 +15,7 @@ class Acesso {
         $_SESSION['Img'] = $Img;
 
         if ($tipo == "empresa"){
-            header("location:./empresa/index.php?empresa");
+            header("location:./empresa/index.php?minha-conta");
         } elseif($tipo == "comum"){
             header("location:./usuario/index.php?comun");
         } elseif($tipo == "administrador"){
