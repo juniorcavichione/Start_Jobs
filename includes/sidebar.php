@@ -40,18 +40,18 @@
             </header>
             <div class="mini-posts">
                 <article>
-                    <a href="https://www.americanas.com.br/" class="image"><img src="images/americanas.png"
+                    <a href="https://www.americanas.com.br/" target="_blank" class="image"><img src="images/americanas.png"
                             alt="Site de compras Americanas" /></a>
                     <p>Americanas tem de tudo a toda hora. em qualquer lugar :)</p>
                 </article>
                 <article>
-                    <a href="https://faucetcrypto.com/ref/1251908" class="image"><img src="images/faucet.png"
+                    <a href="https://faucetcrypto.com/ref/1251908" target="_blank" class="image"><img src="images/faucet.png"
                             alt="Ganhe Criptomoedas Grátis" /></a>
                     <p>Realize pequenas tarefas e Claims de 30 em 30 minutos e ganhe coins e troque por criptomoedas,
                         pagamos diretamente na sua carteira/wallet.</p>
                 </article>
                 <article>
-                    <a href="https://g1.globo.com/" class="image"><img src="images/G1.jpg"
+                    <a href="https://g1.globo.com/" target="_blank" class="image"><img src="images/G1.jpg"
                             alt="Maior portal de notícias do Brasil" /></a>
                     <p>Últimas notícias do Brasil e do mundo, sobre política, economia, emprego, educação, saúde, meio
                         ambiente, tecnologia, ciência, cultura e carros.</p>
