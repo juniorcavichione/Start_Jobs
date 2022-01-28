@@ -1,4 +1,18 @@
-<?php include_once('./includes/cabecalho.php')?>
+<?php 
+
+include_once('./includes/cabecalho.php');
+
+require_once "src/Acesso.php";
+require_once "src/Usuario.php";
+
+$sessao = new Acesso;
+
+if($_SESSION['tipo'] != ""){
+	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
+	echo "<script>window.open('index.php','_self')</script>";
+  }
+  
+?>
 
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -19,7 +33,13 @@
 								<h2 class="text-center fw-bold mb-0">Entre ou se Cadastre</h2>
 							</div>
 							<div id="div-forms">
-								<form id="login-form">
+								<?php if(isset($_POST['entrar'])){
+										echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
+
+								} ?>
+
+
+								<form id="login-form" method="POST">
 									<h3 class="text-center">Login</h3>
 									<div class="modal-body pt-0">
 
