@@ -79,7 +79,7 @@ if ($_SESSION['tipo'] != "") {
 									<?php } var_dump($_SESSION['tipo']);
 ?>
 										<div class="form-floating mb-3">
-											<input type="email" class="form-control rounded-4" id="email">
+											<input type="email" class="form-control rounded-4" name="email" id="email">
 											<label for="email">Email </label>
 										</div>
 										<div class="form-floating mb-3">
@@ -87,8 +87,7 @@ if ($_SESSION['tipo'] != "") {
 												id="floatingPassword">
 											<label for="floatingPassword">Senha</label>
 										</div>
-										<button class="button primary fit mb-3" name="entrar"
-											type="submit">Logar</button>
+										<button class="button primary fit mb-3" name="entrar" type="submit">Logar</button>
 										<hr class="my-4">
 
 										<h2 class="fs-5 fw-bold">Ou tambem pode</h2>
