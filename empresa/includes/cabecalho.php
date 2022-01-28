@@ -1,3 +1,8 @@
+<?php 
+require_once "../src/Acesso.php";
+$sessao = new Acesso;
+$sessao->verificaPermissao();
+?>
 <!DOCTYPE HTML>
 <html>
 

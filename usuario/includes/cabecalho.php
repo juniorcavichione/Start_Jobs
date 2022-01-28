@@ -1,6 +1,10 @@
+<?php 
+require_once "../src/Acesso.php";
+$sessao = new Acesso;
+$sessao->verificaUsercomun();
+?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
 
 	<meta charset="utf-8" />

@@ -1,3 +1,7 @@
+<?php 
+require_once "src/Acesso.php";
+$sessao = new Acesso;
+?>
 <!DOCTYPE HTML>
 <html>
 

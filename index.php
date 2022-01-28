@@ -1,15 +1,11 @@
 <?php include_once('./includes/cabecalho.php')?>
-
 <body class="is-preload">
-
 	<!-- Wrapper -->
 	<div id="wrapper">
-
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-			<?php include "includes/header.php"?>
-				
+			<?php include "includes/header.php"?>				
 				<!-- Banner -->
 				<section id="banner">
 					<div class="content">
@@ -35,14 +31,11 @@
 						<!-- <img src="images/pic10.jpg" alt="" /> -->
 					</span>
 				</section>
-
 				<hr>
 				<!-- VAGAS  BACK-END -->
 				<h2>Vagas</h2>
-
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php');?>
-	</div>
-	
+	</div>	
 	<?php include_once('./includes/footer.php');?>
