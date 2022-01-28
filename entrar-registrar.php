@@ -6,6 +6,7 @@ require_once "src/Acesso.php";
 require_once "src/Usuario.php";
 
 $sessao = new Acesso;
+$usuario = new Usuario;
 
 if ($_SESSION['tipo'] != "") {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
@@ -34,7 +35,6 @@ if ($_SESSION['tipo'] != "") {
 							</div>
 							<div id="div-forms">
 								<?php if (isset($_POST['entrar'])) {
-									$usuario = new Usuario;
 									$usuario->setEmail($_POST['email']);
 									$dados = $usuario->buscaUsuario();
 
@@ -76,8 +76,7 @@ if ($_SESSION['tipo'] != "") {
 									<p class="alert alert-success">
 										<?= $mensagem ?>
 									</p>
-									<?php } var_dump($_SESSION['tipo']);
-?>
+									<?php } ?>
 										<div class="form-floating mb-3">
 											<input type="email" class="form-control rounded-4" name="email" id="email">
 											<label for="email">Email </label>
@@ -101,33 +100,29 @@ if ($_SESSION['tipo'] != "") {
 										</button>
 									</div>
 								</form>
+<!--==================================================== RECUPERE A SENHA ======================================================-->
 
-								<!--====================================================
-				  RECUPERE A SENHA
-				  ======================================================-->
+								<form id="recuperar-form" method="POST" style="display:none;">
+								<?php if (isset($_POST['recupe'])){
+								echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
+								$mensagem = "Clicado enviado email";
+								$mensagem;
+									/* $buscarUser = $usuario->buscaUsuario();
+									if($buscarUser['email'] == $_POST['recupera-mail']){
+									} */
+								}?>
 
-								<form id="recuperar-form" style="display:none;">
 									<h3 class="text-center">Recupe Sua senha</h3>
 									<div class="modal-body p-5 pt-0">
-
 										<div class="form-floating mb-3">
-											<input type="email" class="form-control rounded-4" id="email">
+											<input type="email" class="form-control rounded-4" id="email" name="recupera-mail">
 											<label for="email">Email </label>
 										</div>
-										<button class="button primary fit" name="entrar"
-											type="submit">Recuperar</button>
+										<input type="submit" value="Recuperar" name="recupe" class="button primary fit" />
 										<hr class="my-4">
-
 										<h2 class="fs-5 fw-bold mb-3">Ou tambem pode</h2>
-										<button id="recupera_voltar_logar" class="button primary fit mb-3"
-											type="button">
-
-											Efetuar login
-										</button>
-										<button id="recupera_voltar_registro" class="button primary fit" type="button">
-
-											Cadastre se
-										</button>
+										<a id="recupera_voltar_logar" class="button primary fit mb-3" type="button"> Efetuar login </a>
+										<a id="recupera_voltar_registro" class="button primary fit" type="button"> Cadastre se </a>
 									</div>
 								</form>
 
