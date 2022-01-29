@@ -8,6 +8,14 @@ require_once "src/Usuario.php";
 $sessao = new Acesso;
 $usuario = new Usuario;
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require './phpMailer/Exception.php';
+require './phpMailer/PHPMailer.php';
+require './phpMailer/SMTP.php';
+
 if ($_SESSION['tipo'] != "") {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	echo "<script>window.open('index.php','_self')</script>";
@@ -31,6 +39,8 @@ if ($_SESSION['tipo'] != "") {
 					<div class="modal-dialog">
 						<div class="modal-content rounded-5 shadow">
 							<div class="modal-header pb-4 border-bottom-0">
+							<?php var_dump($enviado); ?>
+
 								<h2 class="text-center fw-bold mb-0">Entre ou se Cadastre</h2>
 							</div>
 							<div id="div-forms">
@@ -103,21 +113,92 @@ if ($_SESSION['tipo'] != "") {
 <!--==================================================== RECUPERE A SENHA ======================================================-->
 
 								<form id="recuperar-form" method="POST" style="display:none;">
-								<?php if (isset($_POST['recupe'])){
-								echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
-								$mensagem = "Clicado enviado email";
-								$mensagem;
-									/* $buscarUser = $usuario->buscaUsuario();
+								<?php 
+								
+								if(!empty($_POST['recupera-mail'])){
+									$usuario->setEmail($_POST['recupera-mail']);
+									$dados = $usuario->buscaUsuario();
+									if($dados['email'] == $_POST['recupera-mail']){
+										$chave_recupera = password_hash($dados['id'], PASSWORD_DEFAULT);
+										$usuario->setId($dados['id']);
+										$usuario->setChave($chave_recupera);
+										$usuario->enviaCodigo();
+										$linkVerif = "http://localhost/Start_Jobs/atualiza_senha.php?chave=$chave_recupera";
+										$mail = new PHPMailer(true);
+										$mail->CharSet = "UTF-8";
+
+											try {
+												//Server settings
+												$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+												$mail->isSMTP();                                            //Send using SMTP
+												$mail->Host       = 'smtp.mailtrap.io';                  //Set the SMTP server to send through
+												$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+												$mail->Username   = '479c15c149b717';                     //SMTP username
+												$mail->Password   = '21fc016e98cdb0';                               //SMTP password
+												$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+												$mail->Port       = 2525;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+							
+													//Recipients
+												$mail->setFrom('contato@startjobs.com.br', 'Recuperacao');
+												$mail->addAddress($dados['email'], $dados['nome']);     //Add a recipient
+							
+							
+												//Content
+												$mail->isHTML(true);                                  //Set email format to HTML
+												$mail->Subject = 'Recuperar senha';
+												$mail->Body    = '<p>Prezado(a)' .$dados['nome']. '<b> Voçê solicitou alteração de senha ?</b><hr><br>
+												para continuar o processo de recuperação de sua senha, clique no link abaixo ou cole no endereço de seu navegador<hr><a href='.$linkVerif.'>Clique aqui para redefinir sua senha</a><br>
+												Se você não solicitou essa alteração, nenhuma acção é necessária. Sua senha permanecerá a mesma até que você ative este còdigo.<hr><br>';
+												$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+							
+							
+												$mail->send();
+							
+										}
+										catch(Exception $e) {
+											echo "Mensagem não enviada Verifique os dados: {$mail->ErrorInfo}";
+										}
+									   echo "<script>alert('Codigo de Redefinição enviado para o e-mail cadastrado ;-)')</script>";
+									   //$_SESSION['msg'] = "<p class='alert alert-success'>Codigo de Redefinição enviado para o e-mail cadastrado</p>";
+
+										
+										
+										
+
+										
+
+
+
+									}else
+									{
+						                echo "<script>alert('Email Não encontrado no banco ;-)')</script>";
+
+									}
+									//echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
+
+								}
+								
+							/* 	if (isset($_POST['recupe'])){
+
+								
+									$buscarUser = $usuario->buscaUsuario();
 									if($buscarUser['email'] == $_POST['recupera-mail']){
-									} */
-								}?>
+										echo "<script>alert('Usuario encontrado ;-)')</script>";
+
+									}
+									
+								} */
+								
+								
+								?>
 
 									<h3 class="text-center">Recupe Sua senha</h3>
 									<div class="modal-body p-5 pt-0">
 										<div class="form-floating mb-3">
-											<input type="email" class="form-control rounded-4" id="email" name="recupera-mail">
+											<input type="email" class="form-control rounded-4" id="email" name="recupera-mail" value="<?php if(isset($_POST['recupera-mail'])){ echo $_POST['recupera-mail'];} ?>">
 											<label for="email">Email </label>
 										</div>
+										<button name="recupe" value="Recuperar" class="button primary fit"><i class="fa fa-sign-in"></i> Recuperar</button>
 										<input type="submit" value="Recuperar" name="recupe" class="button primary fit" />
 										<hr class="my-4">
 										<h2 class="fs-5 fw-bold mb-3">Ou tambem pode</h2>
