@@ -39,7 +39,6 @@ if ($_SESSION['tipo'] != "") {
 					<div class="modal-dialog">
 						<div class="modal-content rounded-5 shadow">
 							<div class="modal-header pb-4 border-bottom-0">
-							<?php var_dump($enviado); ?>
 
 								<h2 class="text-center fw-bold mb-0">Entre ou se Cadastre</h2>
 							</div>
@@ -48,7 +47,7 @@ if ($_SESSION['tipo'] != "") {
 									$usuario->setEmail($_POST['email']);
 									$dados = $usuario->buscaUsuario();
 
-									var_dump($_POST['senha']);
+									//var_dump($_POST['senha']);
 									//se foi localizado um usuario pelo email
 
 									if ($dados != null) {
@@ -71,11 +70,11 @@ if ($_SESSION['tipo'] != "") {
 
 									//echo "<script>alert('estou aqui')</script>";
 								} else {
-									$mensagem = "nao foi possivel logar";
-									$mensagem;
+                                    //$mensagem = "nao foi possivel logar";
+									//$mensagem;
 								}
-								$mensagem = "Digite usuario e senha";
-								$mensagem;
+								//$mensagem = "Digite usuario e senha";
+								//$mensagem;
 								?>
 
 								<form id="login-form" method="POST">
