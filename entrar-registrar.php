@@ -161,14 +161,6 @@ if ($_SESSION['tipo'] != "") {
 									   echo "<script>alert('Codigo de Redefinição enviado para o e-mail cadastrado ;-)')</script>";
 									   //$_SESSION['msg'] = "<p class='alert alert-success'>Codigo de Redefinição enviado para o e-mail cadastrado</p>";
 
-										
-										
-										
-
-										
-
-
-
 									}else
 									{
 						                echo "<script>alert('Email Não encontrado no banco ;-)')</script>";
@@ -176,20 +168,7 @@ if ($_SESSION['tipo'] != "") {
 									}
 									//echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 
-								}
-								
-							/* 	if (isset($_POST['recupe'])){
-
-								
-									$buscarUser = $usuario->buscaUsuario();
-									if($buscarUser['email'] == $_POST['recupera-mail']){
-										echo "<script>alert('Usuario encontrado ;-)')</script>";
-
-									}
-									
-								} */
-								
-								
+								}				
 								?>
 
 									<h3 class="text-center">Recupe Sua senha</h3>
