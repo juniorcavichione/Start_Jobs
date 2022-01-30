@@ -26,19 +26,13 @@ if (isset($_POST['inserir'])) {
             <label for="nome" class="col-form-label">Nome:</label>
             <input type="text" name="nome" class="form-control" id="nome" required>
         </div>
-
         <div class="articl-form">
             <label for="categoria">Categoria:</label>
             <select class="custom-select" name="categoria" id="categoria" required>
-
                 <option selected disabled value="">Escolha Categoria</option>
                <?php foreach($listarCategoria as $categorias) {?>
-
                 <option value="<?=$categorias['id']?>"><?=$categorias['nome']?></option>
-
-
                 <?php }?>
-
             </select>
         </div>
         <div class="articl-form">
@@ -59,19 +53,7 @@ if (isset($_POST['inserir'])) {
         </div>
         <div class="form-group">
             <input type="hidden" class="form-control" id="data" name="data" value="<?php echo $data; ?>">
-        </div>
-        <!--  <div class="farticl-form text-center mt-4">
-            <label for="recipient-name" class="col-form-label">categorie :</label>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" name="catégorie" value="front-end" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" required>
-                <label class="custom-control-label" for="customRadioInline1">Front-end</label>
-            </div>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" name="catégorie" value="back-end" id="customRadioInline2" name="customRadioInline2" class="custom-control-input" required>
-                <label class="custom-control-label" for="customRadioInline2">Back-end</label>
-            </div>
-
-        </div> -->
+        </div>     
         <div class="d-flex justify-content-center mr-auto modal-footer">
             <button type="submit" class="button big" name="inserir">Inserir</button>
         </div>
