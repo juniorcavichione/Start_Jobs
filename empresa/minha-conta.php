@@ -333,15 +333,13 @@
 									<div class="mb-md thumb-info">
 										<!-- mb-md thumb-info begin -->
 
-										<img src="../images/americanas.png"
-											alt="D_NQ_NP_2X_761181-MLB28255608775_092018-F.jpg"
-											class="rounded img-thumbnail">
+										<img class="rounded mx-auto d-block" src="../uploads/<?=$dados['Img']?>" style="width: 200px;">
 
 										<div class="thumb-info-title">
 											<!-- thumb-info-title begin -->
 
 											<span class="thumb-info-inner"> <?=$dados['nome']?> </span>
-											<span class="thumb-info-type"> <?=$dados['tipo']?> </span>
+											<span class="thumb-info-type">Cadastro como<br><?=$dados['tipo']?> </span>
 
 										</div><!-- thumb-info-title finish -->
 
