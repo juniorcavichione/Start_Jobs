@@ -1,21 +1,26 @@
+	<?php 
+	require_once "../src/Usuario.php";
+	$usuario = new Usuario;
+	$usuario->setId($_SESSION['id']);
+	$dados = $usuario->lerUmUsuario();	
+	?>
+	
 	<!-- Banner -->
 	<section id="banner">
 		<div class="content">
 			<header>
+				<pre><?php var_dump($dados) ?> </pre>
 				<h1>Minha Conta Empresa</h1>
-				<p>Site responsível</p>
+				<p>Site responsível</p>				
 			</header>
 				<!-- #page-wrapper begin -->
 				<div class="container-fluid">
 					<!-- container-fluid begin -->
-
-					
-
 					<div class="row mb-3 rounded">
 						<!-- row no: 2 begin -->
 						<div class="col-lg-3 col-md-6">
 							<!-- col-lg-3 col-md-6 begin -->
-							<div class="panel panel-dark">
+							<div class="panel panel-primary">
 								<!-- panel panel-primary begin -->
 
 								<div class="panel-heading box">
@@ -335,8 +340,8 @@
 										<div class="thumb-info-title">
 											<!-- thumb-info-title begin -->
 
-											<span class="thumb-info-inner"> adriano </span>
-											<span class="thumb-info-type"> dev </span>
+											<span class="thumb-info-inner"> <?=$dados['nome']?> </span>
+											<span class="thumb-info-type"> <?=$dados['tipo']?> </span>
 
 										</div><!-- thumb-info-title finish -->
 
@@ -346,7 +351,7 @@
 										<!-- mb-md begin -->
 										<div class="widget-content-expanded">
 											<!-- widget-content-expanded begin -->
-											<i class="fa fa-user"></i> <span> Email: </span> alfa@alfa.com <br>
+											<i class="fa fa-user"></i> <span> Email: </span> <?=$dados['email']?> <br>
 											<i class="fa fa-flag"></i> <span> Cidade: </span> brasil <br>
 											<i class="fa fa-envelope"></i> <span> Contato: </span> 11965782876 <br>
 										</div><!-- widget-content-expanded finish -->

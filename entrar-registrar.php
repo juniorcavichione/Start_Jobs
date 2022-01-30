@@ -1,7 +1,6 @@
 <?php
 
 include_once('./includes/cabecalho.php');
-
 require_once "src/Acesso.php";
 require_once "src/Usuario.php";
 
@@ -20,7 +19,6 @@ if ($_SESSION['tipo'] != "") {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	echo "<script>window.open('index.php','_self')</script>";
 }
-
 ?>
 
 <body class="is-preload">
@@ -79,13 +77,13 @@ if ($_SESSION['tipo'] != "") {
 
 								<form id="login-form" method="POST">
 									<h3 class="text-center">Login</h3>
-									
+
 									<div class="modal-body pt-0">
-									<?php if (isset($mensagem)) { ?>
-									<p class="alert alert-success">
-										<?= $mensagem ?>
-									</p>
-									<?php } ?>
+										<?php if (isset($mensagem)) { ?>
+										<p class="alert alert-success">
+											<?= $mensagem ?>
+										</p>
+										<?php } ?>
 										<div class="form-floating mb-3">
 											<input type="email" class="form-control rounded-4" name="email" id="email">
 											<label for="email">Email </label>
@@ -95,7 +93,8 @@ if ($_SESSION['tipo'] != "") {
 												id="floatingPassword">
 											<label for="floatingPassword">Senha</label>
 										</div>
-										<button class="button primary fit mb-3" name="entrar" type="submit">Logar</button>
+										<button class="button primary fit mb-3" name="entrar"
+											type="submit">Logar</button>
 										<hr class="my-4">
 
 										<h2 class="fs-5 fw-bold">Ou tambem pode</h2>
@@ -109,10 +108,10 @@ if ($_SESSION['tipo'] != "") {
 										</button>
 									</div>
 								</form>
-<!--==================================================== RECUPERE A SENHA ======================================================-->
+								<!--==================================================== RECUPERE A SENHA ======================================================-->
 
 								<form id="recuperar-form" method="POST" style="display:none;">
-								<?php 
+									<?php 
 								
 								if(!empty($_POST['recupera-mail'])){
 									$usuario->setEmail($_POST['recupera-mail']);
@@ -122,7 +121,7 @@ if ($_SESSION['tipo'] != "") {
 										$usuario->setId($dados['id']);
 										$usuario->setChave($chave_recupera);
 										$usuario->enviaCodigo();
-										$linkVerif = "http://localhost/Start_Jobs/atualiza_senha.php?chave=$chave_recupera";
+										$linkVerif = "http://localhost/Start_Jobs/recupera-senha.php?chave=$chave_recupera";
 										$mail = new PHPMailer(true);
 										$mail->CharSet = "UTF-8";
 
@@ -173,61 +172,101 @@ if ($_SESSION['tipo'] != "") {
 									<h3 class="text-center">Recupe Sua senha</h3>
 									<div class="modal-body p-5 pt-0">
 										<div class="form-floating mb-3">
-											<input type="email" class="form-control rounded-4" id="email" name="recupera-mail" value="<?php if(isset($_POST['recupera-mail'])){ echo $_POST['recupera-mail'];} ?>">
+											<input type="email" class="form-control rounded-4" id="email"
+												name="recupera-mail"
+												value="<?php if(isset($_POST['recupera-mail'])){ echo $_POST['recupera-mail'];} ?>">
 											<label for="email">Email </label>
 										</div>
-										<button name="recupe" value="Recuperar" class="button primary fit"><i class="fa fa-sign-in"></i> Recuperar</button>
-										<input type="submit" value="Recuperar" name="recupe" class="button primary fit" />
+										<button name="recupe" value="Recuperar" class="button primary fit"><i
+												class="fa fa-sign-in"></i> Recuperar</button>
+										<input type="submit" value="Recuperar" name="recupe"
+											class="button primary fit" />
 										<hr class="my-4">
 										<h2 class="fs-5 fw-bold mb-3">Ou tambem pode</h2>
-										<a id="recupera_voltar_logar" class="button primary fit mb-3" type="button"> Efetuar login </a>
-										<a id="recupera_voltar_registro" class="button primary fit" type="button"> Cadastre se </a>
+										<a id="recupera_voltar_logar" class="button primary fit mb-3" type="button">
+											Efetuar login </a>
+										<a id="recupera_voltar_registro" class="button primary fit" type="button">
+											Cadastre se </a>
 									</div>
 								</form>
+<!--==================================================== REGISTRAR  ======================================================-->
 
-								<!--====================================================
-				  REGISTRAR
-				  ======================================================-->
-
-								<form id="register-form" style="display:none;">
+								<form id="register-form" style="display:none;" method="POST" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+									<?php 
+								if(isset($_POST['inserir']))
+								{
+									//$usuario = new Usuario;
+									$Img = $_FILES['Img']['name'];
+									$Img_size =  $_FILES['Img']['size'];
+									$tmp_name =  $_FILES['Img']['tmp_name'];
+									$Img_type = $_FILES['Img']['type'];
+									$error =  $_FILES['Img']['error'];
+								  
+									//$novo_nome = TratarNomeArquivo($Img); 
+									$diretotio = "./uploads/";
+								  
+									move_uploaded_file($_FILES['Img']['tmp_name'], $diretotio.$Img);
+									//echo "<script>alert('Seu cadastro foi efetuado com sucesso')</script>";
+									$usuario->setNome($_POST['nome-cadastro']);
+									$usuario->setEmail($_POST['email-cadastro']);
+									$usuario->setSenha( $usuario->codificaSenha($_POST['senha-cadastro']));
+									$usuario->setTipo($_POST['tipo-cadastro']);
+									$usuario->setImg($Img);
+									$varnull = "NULL";
+									$usuario->setChave($varnull);
+									//echo "<script>alert('Seu cadastro foi efetuado com sucesso')</script>";
+									if($_POST['senha'] === $_POST['senha1']){
+										$usuario->inserirUsuario();
+									  echo "<script>alert('Seu cadastro foi efetuado com sucesso')</script>";
+									  echo "<script>window.open('entrar-registrar.php','_self')</script>";								  
+									}
+									$status = "Senhas não confere escreva novamente";
+								   //echo "<script>window.open('index.php','_self')</script>";
+									//header("location:index.php");
+								}								
+								?>
 									<h3 class="text-center">Registre</h3>
 									<div class="modal-body p-5 pt-0">
 
 										<div class="form-floating mb-3">
-											<input type="text" class="form-control rounded-4" id="nome" name="nome">
+											<input type="text" class="form-control rounded-4" id="nome" name="nome-cadastro">
 											<label for="nome">Nome:</label>
 										</div>
 										<div class="form-floating mb-3">
-											<input type="email" class="form-control rounded-4" id="email" name="email">
+											<input type="email" class="form-control rounded-4" id="email" name="email-cadastro">
 											<label for="email">Endereço de e-mail</label>
 										</div>
 										<div class="form-floating mb-3">
-											<label for="recipient-name" class="form-label"></label>
+										<label for="recipient-name" class="form-label">Imagen de perfil</label>
 											<input type="file" name="Img" class="form-control">
 										</div>
 										<div class="form-floating mb-3">
-											<input type="password" class="form-control rounded-4" name="senha"
+											<input type="password" class="form-control rounded-4" name="senha-cadastro"
 												id="senha">
 											<label for="senha">Senha</label>
 										</div>
 										<div class="form-floating mb-3">
-											<input type="password" class="form-control rounded-4" name="senha1"
+											<input type="password" class="form-control rounded-4" name="senha1-cadastro"
 												id="senha1">
-											<label for="senha2">
+											<label for="senha1">
 												<span id="ValorNota" name="valorNota"></span>
 												<span id="situacao" name="situacao"></span>
 												<span id="mensagem" name="mensagem"></span>
 											</label>
 										</div>
 										<div class="form-floating form-floating-inline mb-3">
-											<input type="radio" class="btn btn-outline" name="tipo" value="empresa"
-												id="success-outlined" autocomplete="off">
-											<label class="btn btn-outline" for="success-outlined">Cadastrar vaga</label>
-											<input type="radio" class="btn-check" name="tipo" value="comum"
-												id="danger-outlined" autocomplete="off">
-											<label class="btn btn-outline" for="danger-outlined">Cadastro
-												curriculo</label>
-											<button class="button primary fit" name="inserir">Cadastre-se</button>
+											<div class="row mb-3">
+												<div class="col-4 col-12-small">
+													<input type="radio" id="comun" name="tipo-cadastro" value="comum" checked>
+													<label for="comun">Cadastrar curriculo</label>
+												</div>
+												<div class="col-4 col-12-small">
+													<input type="radio" id="empresa" name="tipo-cadastro" value="empresa">
+													<label for="empresa">Cadastrar vagas</label>
+												</div>
+											</div>
+
+											<button class="button primary fit mt-2" type="submit" name="inserir">Cadastre-se</button>
 											<hr class="my-4">
 											<small class="text-muted">Ao clicar em Cadastre-se, você concorda com os
 												termos de uso.</small>
@@ -252,4 +291,66 @@ if ($_SESSION['tipo'] != "") {
 		</div>
 		<?php include_once('./includes/sidebar.php'); ?>
 	</div>
+	<script>
+var campo1 = document.getElementById("senha-cadastro");
+var campo2 = document.getElementById("senha1-cadastro");
+var media = document.getElementById("media");
+var resultado = document.getElementById("ValorNota");
+var reprovado = document.getElementById("situacao");
+var aprovado = document.getElementById("situacao");
+
+
+function trocaCor() {
+  document.getElementById("situacao").style.color = "red";
+}
+function Aprovado() {
+  document.getElementById("situacao").style.color = "green";
+}
+
+var somenteNumeros = new RegExp("[^0-9]", "g");
+
+var toNumber = function (value) {
+  var number = value.replace(somenteNumeros, "");    
+  number = parseInt(number);    
+  if (isNaN(number)) 
+    number = 0;
+  return number;
+}
+
+var somenteNumeros = function (event) {
+  event.target.value = toNumber(event.target.value);
+}
+
+var onInput = function (event) {
+  var num1 = toNumber(senha.value);
+  var num2 = toNumber(senha1.value);  
+
+  if (num1 != "" && num2 != "" && num1 === num2)
+    {
+    	//alert('senha iguais');
+      aprovado.textContent = ("Senhas Corretas");
+      Aprovado();
+    }
+    else
+    {
+      //	alert('senhas diferentes');
+        reprovado.textContent = ("Senha errada digite novamente");
+        trocaCor();
+    }
+
+    if(num1 < 1){
+    aprovado.textContent = ("Digite a mesma senha");
+      Aprovado().focus();
+  }
+}
+
+senha.addEventListener("input", somenteNumeros);
+senha1.addEventListener("input", somenteNumeros);
+resultado.addEventListener("input", somenteNumeros);
+resultado.addEventListener("input", onInput);
+senha.addEventListener("input", onInput);
+senha1.addEventListener("input", onInput);
+
+onInput();
+</script>
 	<?php include_once('./includes/footer.php'); ?>

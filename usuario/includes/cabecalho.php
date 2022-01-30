@@ -19,8 +19,7 @@ if(isset($_GET['sair'])){
 	<meta name="description" content="Encontre seu emprego aqui de forma totalmente gratuita">
 	<!-- Palavras chaves Quanto menos palavras chaves melhor-->
 	<meta name="keywords" content="Emprego, Trabalho">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="../assets/css/main.css" />
 	<title>Start_Jobs</title>
 	<!-- Inserindo o Favicon -->

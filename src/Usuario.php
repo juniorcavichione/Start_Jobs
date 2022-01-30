@@ -9,7 +9,7 @@ class Usuario
     private string $senha;
     private string $tipo;
     private string $Img;
-    private string $chave;
+    private string $chave; 
 
 
     public function __construct()
@@ -19,7 +19,7 @@ class Usuario
 
     public function inserirUsuario(): void
     {
-        $sql = "INSERT INTO usuarios(nome, email, senha, tipo, Img) VALUES(:nome, :email, :senha, :tipo, :Img)";
+        $sql = "INSERT INTO usuarios(nome, email, senha, tipo, Img, chave) VALUES(:nome, :email, :senha, :tipo, :Img, :chave)";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -28,6 +28,7 @@ class Usuario
             $consulta->bindParam(':senha', $this->senha, PDO::PARAM_STR);
             $consulta->bindParam(':tipo', $this->tipo, PDO::PARAM_STR);
             $consulta->bindParam(':Img', $this->Img, PDO::PARAM_STR);
+            $consulta->bindParam(':chave', $this->chave, PDO::PARAM_STR);
 
             $consulta->execute();
         } catch (Exception $erro) {
@@ -66,6 +67,50 @@ class Usuario
 
         return $resultado;
     }
+
+
+    public function enviaSenha(): void
+    {
+
+
+        try {
+            $sql = "UPDATE usuarios SET  senha = :senha, chave = :chave WHERE id = :id LIMIT 1";
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(':id', $this->id, PDO::PARAM_INT);
+            $consulta->bindParam(':senha', $this->senha, PDO::PARAM_STR);
+            $consulta->bindParam(':chave', $this->chave, PDO::PARAM_STR);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: " . $erro->getMessage());
+        }
+        return;
+    }
+
+
+
+
+
+
+
+
+
+
+/* 
+    public function atualizaSenha():void {
+        $sql = "UPDATE usuarios SET senha = :senha, chave = :chave WHERE id = :id";
+
+        try
+        {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindParam(':id', $this->customer_id, PDO::PARAM_INT);
+        $consulta->bindParam(':senha', $this->senha, PDO::PARAM_STR);
+        $consulta->bindParam(':chave', $this->chave, PDO::PARAM_STR);
+        $consulta->execute();
+        }
+        catch(Exception $erro){ 
+            die( "Erro: " .$erro->getMessage());
+        }
+    } */
 
 
 
@@ -144,6 +189,20 @@ class Usuario
             die("Erro: " . $erro->getMessage());
         }
         return;
+    }
+
+    public function verificaCodigo(){
+
+        try{
+        $sql = "SELECT id FROM usuarios WHERE chave = :chave LIMIT 1";
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindParam(':chave', $this->chave, PDO::PARAM_STR);
+        $consulta->execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    }catch(Exception $erro){ 
+        die( "Erro: " .$erro->getMessage());
+    }
+    return $resultado;
     }
 
     public function codificaSenha(string $senha): string
