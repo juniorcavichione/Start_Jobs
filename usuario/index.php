@@ -1,4 +1,10 @@
-<?php include_once('./includes/cabecalho.php')?>
+<?php include_once('./includes/cabecalho.php');
+ 
+if(isset($_GET['exit'])){
+	$sessao->logout();
+  }
+  ?>
+
 <body class="is-preload">
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -8,26 +14,18 @@
 				<!-- Header -->
 				<?php include "includes/header.php"?>
 
-				<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h1>Minha conta</h1>
-						</header>
-						<p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
-						<p>Temos vagas de:</p>
-						<ul>
-							<li>Informática | TI</li>
-							<li>Logística</li>
-							<li>Administração</li>
-							<li>Serviços</li>
-							<li>Free Lancer</li>
-						</ul>
-						<ul class="actions">
-							<li><a href="vagas.php" class="button big">Página de vagas</a></li>
-						</ul>
-					</div>					
-				</section>
+				<!-- NAVEGAÇÃO POR GET  -->
+				<?php 
+				if(isset($_GET['minha-conta'])){
+					include("minha-conta.php");
+				} if(isset($_GET['editar-conta'])){
+					include("editar-conta.php");
+				}if(isset($_GET['minha-vaga'])){
+					include("minha-vaga.php");
+				} if(isset($_GET['excluir-conta'])){
+					include("excluir-conta.php");
+				}				
+				?>			
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php');?>
