@@ -2,6 +2,7 @@
 require_once "Banco.php";
 
 class Vaga {
+    ///principal
     private  $id;
     private  $nome;
     private  $salario;
@@ -9,10 +10,17 @@ class Vaga {
     private  $descricao;
     private  $beneficio;
     private  $data;
-    private  $categoriaId;
-    
+    private  $categoria_id;
+
+    ///interessados
+    private $id_interessados;
+    private $id_usuario;
+    private $id_vaga;
+    private $solicitacao;
+    ///Busca
     private  $termo;
 
+    ///Conexão
     private  $conexao;
 
     public function __construct(){
@@ -23,7 +31,7 @@ class Vaga {
         $sql = "SELECT vaga.nome AS vagas, vaga.*, 
                         categorias.nome AS categoria 
                 FROM vaga INNER JOIN categorias 
-                ON categorias.id = vaga.categorias_id ORDER BY vagas";
+                ON categorias.id = vaga.categoria_id ORDER BY vagas";
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->execute();
@@ -37,7 +45,7 @@ class Vaga {
 
     
     public function inserirVaga(){
-        $sql = "INSERT INTO vaga(nome, salario, localidade, descricao, beneficio, data, categorias_id) VALUES(:nome, :salario, :localidade, :descricao, :beneficio, :data, :categorias_id)";
+        $sql = "INSERT INTO vaga(nome, salario, localidade, descricao, beneficio, data, categoria_id) VALUES(:nome, :salario, :localidade, :descricao, :beneficio, :data, :categoria_id)";
 
         
         try {
@@ -48,7 +56,7 @@ class Vaga {
             $consulta->bindParam(":descricao", $this->descricao, PDO::PARAM_STR);
             $consulta->bindParam(":beneficio", $this->beneficio, PDO::PARAM_STR);
             $consulta->bindParam(":data", $this->data, PDO::PARAM_STR);
-            $consulta->bindParam(":categorias_id", $this->categoriaId, PDO::PARAM_INT);
+            $consulta->bindParam(":categoria_id", $this->categoria_id, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die( "Erro: " .$erro->getMessage());
@@ -66,12 +74,52 @@ class Vaga {
          
          return $resultado;
 
-
-
-
-
     }
 
+    ///////Inserir interessados
+
+    public function insereIntere(){
+        $sql = "INSERT INTO interessados(id_usuario, id_vaga, solicitacao) VALUES(:id_usuario, :id_vaga, :solicitacao)";
+        try{ $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam("id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            $consulta->bindParam("id_vaga", $this->id_vaga, PDO::PARAM_INT);
+            $consulta->bindParam("solicitacao", $this->solicitacao, PDO::PARAM_STR);
+            $consulta->execute();
+        }catch (Exception $erro) {
+            die( "Erro: " .$erro->getMessage());
+        }
+    }
+
+    public function lerInteressados():array{
+        $sql = "SELECT COUNT(*) FROM interessados WHERE id_usuario = :id_usuario AND id_vaga = :id_vaga";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            $consulta->bindParam("id_vaga", $this->id_vaga, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetchall(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die( "Erro: " .$erro->getMessage());
+        }
+        return $resultado;        
+    } // fim lerUmVaga
+
+    public function contaInteressados():array{
+        $sql = "SELECT COUNT(*) FROM interessados WHERE id_usuario = :id_usuario";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            //$consulta->bindParam("id_vaga", $this->id_vaga, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetchall(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die( "Erro: " .$erro->getMessage());
+        }
+        return $resultado;        
+    } // fim lerUmVaga
+////FIM INTERESSADOS
 
     public function lerUmaVaga(){
         $sql = "SELECT * FROM vaga WHERE id = :id";
@@ -89,20 +137,21 @@ class Vaga {
 
 
     public function atualizarVaga(){
-        $sql = "UPDATE vaga SET nome = :nome, salario = :salario,
-        localidade = :localidade, descricao = :descricao, data = :data,
-        categorias_id = :categorias_id WHERE id = :id";
+        $sql = "UPDATE vaga SET nome = :nome, categoria_id = :categoria_id, descricao = :descricao, beneficio = :beneficio,
+         salario = :salario, localidade = :localidade, data = :data WHERE vaga . id = :id";
         
 
         try {
             $consulta = $this->conexao->prepare($sql);
+           $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+
             $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
             $consulta->bindParam(":salario", $this->salario, PDO::PARAM_STR); 
             $consulta->bindParam(":localidade", $this->localidade, PDO::PARAM_STR);
             $consulta->bindParam(":descricao", $this->descricao, PDO::PARAM_STR);
             $consulta->bindParam(":beneficio", $this->beneficio, PDO::PARAM_STR);
             $consulta->bindParam(":data", $this->data, PDO::PARAM_STR);
-            $consulta->bindParam(":categorias_id", $this->categoriaId, PDO::PARAM_INT);
+            $consulta->bindParam(":categoria_id", $this->categoria_id, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die( "Erro: " .$erro->getMessage());
@@ -159,14 +208,39 @@ class Vaga {
     /* Getters */
     public function getId():int { return $this->id; }
     public function getNome():string { return $this->nome; }
-    public function getCategoriaId():int { return $this->categoriaId; }
+    public function getCategoriaId():int { return $this->categoria_id; }
     public function getLocalidade():string { return $this->localidade; }
     public function getDescricao():string { return $this->descricao; }
     public function getBeneficio():string { return $this->beneficio; }
     public function getData():string { return $this->benefidata; }
-
     public function getSalario():float { return $this->salario; }
     public function getTermo():string { return $this->termo; }
+
+
+        /* Getters interessados*/
+
+        public function getIdintere():int{return $this->id_interessados;}
+        public function getIdusuario():int{return $this->id_usuario;}
+        public function getIdvagas():int{return $this->id_vaga;}
+        public function getSolicitacao():string{return $this->solicitacao;}
+
+
+    /* Setters interessados*/
+
+    public function setIdintere(int $id_interessados){
+        $this->id_interessados = filter_var($id_interessados, FILTER_SANITIZE_NUMBER_INT);
+    }
+    public function setIdusuario(int $id_usuario){
+        $this->id_usuario = filter_var($id_usuario, FILTER_SANITIZE_NUMBER_INT);
+    }
+    public function setIdvagas(int $id_vaga){
+        $this->id_vaga = filter_var($id_vaga, FILTER_SANITIZE_NUMBER_INT);
+    }
+    public function setSolicitacao(string $solicitacao){
+        $this->solicitacao = filter_var($solicitacao, FILTER_SANITIZE_STRING);
+    }
+
+
 
     /* Setters */
     public function setTermo(string $termo) {
@@ -196,8 +270,8 @@ class Vaga {
     public function setData(string $data) {
         $this->data = filter_var($data, FILTER_SANITIZE_STRING);
     }
-    public function setCategoriaId( $categoriaId) {
-        $this->categoriaId = filter_var($categoriaId, FILTER_SANITIZE_NUMBER_INT);
+    public function setCategoriaId( $categoria_id) {
+        $this->categoria_id = filter_var($categoria_id, FILTER_SANITIZE_NUMBER_INT);
     }
 
 
