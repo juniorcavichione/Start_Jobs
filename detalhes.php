@@ -1,9 +1,32 @@
 <?php
 include_once('./includes/cabecalho.php');
+require_once "src/Usuario.php";
+$usuario = new Usuario;
+$usuario->setId($_SESSION['id']);
+$dadosUser = $usuario->lerUmUsuario();
 require_once "./src/Vaga.php";
 $vaga = new Vaga;
 $vaga->setId($_GET['id']);
 $dados = $vaga->lerUmaVaga();
+$solicitacao = 1;
+
+if(isset($_POST['adicionar'])){
+    $vaga->setIdusuario($_SESSION['id']);
+    $vaga->setIdvagas($dados['id']);
+    $vaga->setSolicitacao($solicitacao); 
+    $vaga->setIdusuario($_SESSION['id']);
+    $verificaVaga = $vaga->contaInteressados();
+    if($verificaVaga >= 3){
+        //OBS acertar quantidade de cadastro
+        echo "<script>alert('Já está inscrito nessa vaga selecione outra ;-)')</script>";
+        //$vaga->insereIntere();
+    }else
+    {
+        //echo "<script>alert('nao tem vaga  ;-)')</script>";
+        $vaga->insereIntere();
+    }
+    //echo "<script>alert('Clicado  ;-)')</script>";
+}
 ?>
 <body class="is-preload">
     <!-- Wrapper -->
@@ -16,11 +39,17 @@ $dados = $vaga->lerUmaVaga();
                 <section id="banner">
                     <main>
                         <h1><?=$dados['nome']?></h1>
-                        <pre><?php //var_dump($dados)?></pre>
+                        <pre><?php var_dump($_SESSION['id'])?></pre>
                         <p class="fs-5 col-md-8"><?=$dados['descricao']?></p>
+                        <p class="fs-5 col-md-8"><?php var_dump($verificaVaga)?></p>
+
 
                         <div class="mb-5">
-                            <a href="/docs/5.0/examples/" class="btn btn-primary btn-lg px-4">Se inscreva</a>
+                            <form action="" method="post">
+                                <button href="" name="adicionar" class="button big btn-lg px-4">Se inscreva</button>
+
+                            </form>
+                            
                         </div>
 
 <!--                         <hr class="col-3 col-md-2 mb-5">
