@@ -10,7 +10,7 @@
 		<div class="content">
 			<header>
 				<pre><?php var_dump($dados) ?> </pre>
-				<h1>Minha Conta Empresa</h1>
+				<h1>Minha Conta</h1>
 				<p>Site responsível</p>
 			</header>
 			<!-- #page-wrapper begin -->
