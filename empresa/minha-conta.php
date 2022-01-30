@@ -4,374 +4,374 @@
 	$usuario->setId($_SESSION['id']);
 	$dados = $usuario->lerUmUsuario();	
 	?>
-	
+
 	<!-- Banner -->
 	<section id="banner">
 		<div class="content">
 			<header>
 				<pre><?php var_dump($dados) ?> </pre>
 				<h1>Minha Conta Empresa</h1>
-				<p>Site responsível</p>				
+				<p>Site responsível</p>
 			</header>
-				<!-- #page-wrapper begin -->
-				<div class="container-fluid">
-					<!-- container-fluid begin -->
-					<div class="row mb-3 rounded">
-						<!-- row no: 2 begin -->
-						<div class="col-lg-3 col-md-6">
-							<!-- col-lg-3 col-md-6 begin -->
-							<div class="panel panel-primary">
-								<!-- panel panel-primary begin -->
+			<!-- #page-wrapper begin -->
+			<div class="container-fluid">
+				<!-- container-fluid begin -->
+				<div class="row mb-3 rounded">
+					<!-- row no: 2 begin -->
+					<div class="col-lg-3 col-md-6">
+						<!-- col-lg-3 col-md-6 begin -->
+						<div class="panel panel-primary">
+							<!-- panel panel-primary begin -->
 
-								<div class="panel-heading box">
-									<!-- panel-heading begin -->
-									<div class="row">
-										<!-- panel-heading row begin -->
-										<div class="col-xs-3">
-											<!-- col-xs-3 begin -->
+							<div class="panel-heading box">
+								<!-- panel-heading begin -->
+								<div class="row">
+									<!-- panel-heading row begin -->
+									<div class="col-xs-3">
+										<!-- col-xs-3 begin -->
 
-											<i class="fa fa-tasks fa-5x"></i>
+										<i class="fa fa-tasks fa-5x"></i>
 
-										</div><!-- col-xs-3 finish -->
+									</div><!-- col-xs-3 finish -->
 
-										<div class="col-xs-9 text-right">
-											<!-- col-xs-9 text-right begin -->
-											<div class="huge"> 8 </div>
+									<div class="col-xs-9 text-right">
+										<!-- col-xs-9 text-right begin -->
+										<div class="huge"> 8 </div>
 
-											<div> Vagas </div>
+										<div> Vagas </div>
 
-										</div><!-- col-xs-9 text-right finish -->
+									</div><!-- col-xs-9 text-right finish -->
 
-									</div><!-- panel-heading row finish -->
-								</div><!-- panel-heading finish -->
+								</div><!-- panel-heading row finish -->
+							</div><!-- panel-heading finish -->
 
+							<a href="index.php?view_products">
+								<!-- a href begin -->
+								<div class="panel-footer">
+									<!-- panel-footer begin -->
 
-								<a href="index.php?view_products">
-									<!-- a href begin -->
-									<div class="panel-footer">
-										<!-- panel-footer begin -->
+									<span class="pull-left">
+										<!-- pull-left begin -->
+										Ver detalhes
+									</span><!-- pull-left finish -->
 
-										<span class="pull-left">
-											<!-- pull-left begin -->
-											Ver detalhes
-										</span><!-- pull-left finish -->
+									<span class="pull-right">
+										<!-- pull-right begin -->
+										<i class="fa fa-arrow-circle-right"></i>
+									</span><!-- pull-right finish -->
 
-										<span class="pull-right">
-											<!-- pull-right begin -->
-											<i class="fa fa-arrow-circle-right"></i>
-										</span><!-- pull-right finish -->
+									<div class="clearfix"></div>
 
-										<div class="clearfix"></div>
+								</div><!-- panel-footer finish -->
+							</a><!-- a href finish -->
 
-									</div><!-- panel-footer finish -->
-								</a><!-- a href finish -->
+						</div><!-- panel panel-primary finish -->
+					</div><!-- col-lg-3 col-md-6 finish -->
 
-							</div><!-- panel panel-primary finish -->
-						</div><!-- col-lg-3 col-md-6 finish -->
+					<div class="col-lg-3 col-md-6">
+						<!-- col-lg-3 col-md-6 begin -->
+						<div class="panel panel-green">
+							<!-- panel panel-green begin -->
 
-						<div class="col-lg-3 col-md-6">
-							<!-- col-lg-3 col-md-6 begin -->
-							<div class="panel panel-green">
-								<!-- panel panel-green begin -->
+							<div class="panel-heading box">
+								<!-- panel-heading begin -->
+								<div class="row">
+									<!-- panel-heading row begin -->
+									<div class="col-xs-3">
+										<!-- col-xs-3 begin -->
 
-								<div class="panel-heading box">
-									<!-- panel-heading begin -->
-									<div class="row">
-										<!-- panel-heading row begin -->
-										<div class="col-xs-3">
-											<!-- col-xs-3 begin -->
+										<i class="fa fa-users fa-5x"></i>
 
-											<i class="fa fa-users fa-5x"></i>
+									</div><!-- col-xs-3 finish -->
 
-										</div><!-- col-xs-3 finish -->
+									<div class="col-xs-9 text-right">
+										<!-- col-xs-9 text-right begin -->
+										<div class="huge"> 14 </div>
 
-										<div class="col-xs-9 text-right">
-											<!-- col-xs-9 text-right begin -->
-											<div class="huge"> 14 </div>
+										<div> Candidatos </div>
 
-											<div> Candidatos </div>
+									</div><!-- col-xs-9 text-right finish -->
 
-										</div><!-- col-xs-9 text-right finish -->
+								</div><!-- panel-heading row finish -->
+							</div><!-- panel-heading finish -->
 
-									</div><!-- panel-heading row finish -->
-								</div><!-- panel-heading finish -->
+							<a href="index.php?view_customers">
+								<!-- a href begin -->
+								<div class="panel-footer">
+									<!-- panel-footer begin -->
 
-								<a href="index.php?view_customers">
-									<!-- a href begin -->
-									<div class="panel-footer">
-										<!-- panel-footer begin -->
+									<span class="pull-left">
+										<!-- pull-left begin -->
+										Ver detalhes
+									</span><!-- pull-left finish -->
 
-										<span class="pull-left">
-											<!-- pull-left begin -->
-											Ver detalhes
-										</span><!-- pull-left finish -->
+									<span class="pull-right">
+										<!-- pull-right begin -->
+										<i class="fa fa-arrow-circle-right"></i>
+									</span><!-- pull-right finish -->
 
-										<span class="pull-right">
-											<!-- pull-right begin -->
-											<i class="fa fa-arrow-circle-right"></i>
-										</span><!-- pull-right finish -->
+									<div class="clearfix"></div>
 
-										<div class="clearfix"></div>
+								</div><!-- panel-footer finish -->
+							</a><!-- a href finish -->
 
-									</div><!-- panel-footer finish -->
-								</a><!-- a href finish -->
+						</div><!-- panel panel-green finish -->
+					</div><!-- col-lg-3 col-md-6 finish -->
 
-							</div><!-- panel panel-green finish -->
-						</div><!-- col-lg-3 col-md-6 finish -->
+					<div class="col-lg-3 col-md-6">
+						<!-- col-lg-3 col-md-6 begin -->
+						<div class="panel panel-orange">
+							<!-- panel panel-yellow begin -->
 
-						<div class="col-lg-3 col-md-6">
-							<!-- col-lg-3 col-md-6 begin -->
-							<div class="panel panel-orange">
-								<!-- panel panel-yellow begin -->
+							<div class="panel-heading box">
+								<!-- panel-heading begin -->
+								<div class="row">
+									<!-- panel-heading row begin -->
+									<div class="col-xs-3">
+										<!-- col-xs-3 begin -->
 
-								<div class="panel-heading box">
-									<!-- panel-heading begin -->
-									<div class="row">
-										<!-- panel-heading row begin -->
-										<div class="col-xs-3">
-											<!-- col-xs-3 begin -->
-
-											<i class="fa fa-tags fa-5x"></i>
+										<i class="fa fa-tags fa-5x"></i>
 
-										</div><!-- col-xs-3 finish -->
+									</div><!-- col-xs-3 finish -->
 
-										<div class="col-xs-9 text-rig">
-											<!-- col-xs-9 text-right begin -->
-											<div class="huge"> 1 </div>
+									<div class="col-xs-9 text-rig">
+										<!-- col-xs-9 text-right begin -->
+										<div class="huge"> 1 </div>
 
-											<div> Vagas Categorias </div>
+										<div> Vagas Categorias </div>
 
-										</div><!-- col-xs-9 text-right finish -->
-
-									</div><!-- panel-heading row finish -->
-								</div><!-- panel-heading finish -->
+									</div><!-- col-xs-9 text-right finish -->
 
-								<a href="index.php?view_p_cats">
-									<!-- a href begin -->
-									<div class="panel-footer">
-										<!-- panel-footer begin -->
+								</div><!-- panel-heading row finish -->
+							</div><!-- panel-heading finish -->
 
-										<span class="pull-left">
-											<!-- pull-left begin -->
-											Ver detalhes
-										</span><!-- pull-left finish -->
-
-										<span class="pull-right">
-											<!-- pull-right begin -->
-											<i class="fa fa-arrow-circle-right"></i>
-										</span><!-- pull-right finish -->
+							<a href="index.php?view_p_cats">
+								<!-- a href begin -->
+								<div class="panel-footer">
+									<!-- panel-footer begin -->
 
-										<div class="clearfix"></div>
+									<span class="pull-left">
+										<!-- pull-left begin -->
+										Ver detalhes
+									</span><!-- pull-left finish -->
+
+									<span class="pull-right">
+										<!-- pull-right begin -->
+										<i class="fa fa-arrow-circle-right"></i>
+									</span><!-- pull-right finish -->
 
-									</div><!-- panel-footer finish -->
-								</a><!-- a href finish -->
+									<div class="clearfix"></div>
 
-							</div><!-- panel panel-yellow finish -->
-						</div><!-- col-lg-3 col-md-6 finish -->
+								</div><!-- panel-footer finish -->
+							</a><!-- a href finish -->
 
-						<div class="col-lg-3 col-md-6">
-							<!-- col-lg-3 col-md-6 begin -->
-							<div class="panel panel-red">
-								<!-- panel panel-red begin -->
-								<div class="panel-heading box">
-									<!-- panel-heading begin -->
-									<div class="row">
-										<!-- panel-heading row begin -->
-										<div class="col-xs-3">
-											<!-- col-xs-3 begin -->
+						</div><!-- panel panel-yellow finish -->
+					</div><!-- col-lg-3 col-md-6 finish -->
 
-											<i class="fa fa-shopping-cart fa-5x"></i>
+					<div class="col-lg-3 col-md-6">
+						<!-- col-lg-3 col-md-6 begin -->
+						<div class="panel panel-red">
+							<!-- panel panel-red begin -->
+							<div class="panel-heading box">
+								<!-- panel-heading begin -->
+								<div class="row">
+									<!-- panel-heading row begin -->
+									<div class="col-xs-3">
+										<!-- col-xs-3 begin -->
 
-										</div><!-- col-xs-3 finish -->
+										<i class="fa fa-shopping-cart fa-5x"></i>
 
-										<div class="col-xs-9 text-right">
-											<!-- col-xs-9 text-right begin -->
-											<div class="huge"> 2 </div>
+									</div><!-- col-xs-3 finish -->
 
-											<div> Pedidos </div>
+									<div class="col-xs-9 text-right">
+										<!-- col-xs-9 text-right begin -->
+										<div class="huge"> 2 </div>
 
-										</div><!-- col-xs-9 text-right finish -->
+										<div> Pedidos </div>
 
-									</div><!-- panel-heading row finish -->
-								</div><!-- panel-heading finish -->
+									</div><!-- col-xs-9 text-right finish -->
 
-								<a href="index.php?view_orders">
-									<!-- a href begin -->
-									<div class="panel-footer">
-										<!-- panel-footer begin -->
+								</div><!-- panel-heading row finish -->
+							</div><!-- panel-heading finish -->
 
-										<span class="pull-left">
-											<!-- pull-left begin -->
-											Ver detalhes
-										</span><!-- pull-left finish -->
+							<a href="index.php?view_orders">
+								<!-- a href begin -->
+								<div class="panel-footer">
+									<!-- panel-footer begin -->
 
-										<span class="pull-right">
-											<!-- pull-right begin -->
-											<i class="fa fa-arrow-circle-right"></i>
-										</span><!-- pull-right finish -->
+									<span class="pull-left">
+										<!-- pull-left begin -->
+										Ver detalhes
+									</span><!-- pull-left finish -->
 
-										<div class="clearfix"></div>
+									<span class="pull-right">
+										<!-- pull-right begin -->
+										<i class="fa fa-arrow-circle-right"></i>
+									</span><!-- pull-right finish -->
 
-									</div><!-- panel-footer finish -->
-								</a><!-- a href finish -->
+									<div class="clearfix"></div>
 
-							</div><!-- panel panel-red finish -->
-						</div><!-- col-lg-3 col-md-6 finish -->
+								</div><!-- panel-footer finish -->
+							</a><!-- a href finish -->
 
-					</div><!-- row no: 2 finish -->
-<hr>
-					<div class="row mb-3 rounded">
-						<!-- row no: 3 begin -->
-						<div class="col-lg-8">
-							<!-- col-lg-8 begin -->
-							<div class="panel panel-primary">
-								<!-- panel panel-primary begin -->
-								<div class="panel-heading">
-									<!-- panel-heading begin -->
-									<h3 class="panel-title">
-										<!-- panel-title begin -->
+						</div><!-- panel panel-red finish -->
+					</div><!-- col-lg-3 col-md-6 finish -->
 
-										<i class="fa fa-money fa-fw"></i> Novo Candidato
+				</div><!-- row no: 2 finish -->
+				<hr>
+				<div class="row mb-3 rounded">
+					<!-- row no: 3 begin -->
+					<div class="col-lg-8">
+						<!-- col-lg-8 begin -->
+						<div class="panel panel-primary">
+							<!-- panel panel-primary begin -->
+							<div class="panel-heading">
+								<!-- panel-heading begin -->
+								<h3 class="panel-title">
+									<!-- panel-title begin -->
 
-									</h3><!-- panel-title finish -->
-								</div><!-- panel-heading finish -->
+									<i class="fa fa-money fa-fw"></i> Novo Candidato
 
-								<div class="panel-body mx-1 box">
-									<!-- panel-body begin -->
-									<div class="table-responsive">
-										<!-- table-responsive begin -->
-										<table class="table table-hover table-striped table-bordered">
-											<!-- table table-hover table-striped table-bordered begin -->
+								</h3><!-- panel-title finish -->
+							</div><!-- panel-heading finish -->
 
-											<thead>
-												<!-- thead begin -->
+							<div class="panel-body mx-1 box">
+								<!-- panel-body begin -->
+								<div class="table-responsive">
+									<!-- table-responsive begin -->
+									<table class="table table-hover table-striped table-bordered">
+										<!-- table table-hover table-striped table-bordered begin -->
 
-												<tr>
-													<!-- th begin -->
+										<thead>
+											<!-- thead begin -->
 
-													<th> Candidato no: </th>
-													<th> Candidato Email: </th>
-													<th> Solicitação No: </th>
-													<th> Vaga ID: </th>
-													<th> Vaga Data: </th>
-													<th> Vaga Qtd: </th>
-													<th> Status: </th>
+											<tr>
+												<!-- th begin -->
 
-												</tr><!-- th finish -->
+												<th> Candidato no: </th>
+												<th> Candidato Email: </th>
+												<th> Solicitação No: </th>
+												<th> Vaga ID: </th>
+												<th> Vaga Data: </th>
+												<th> Vaga Qtd: </th>
+												<th> Status: </th>
 
-											</thead><!-- thead finish -->
+											</tr><!-- th finish -->
 
-											<tbody>
-												<!-- tbody begin -->
+										</thead><!-- thead finish -->
 
-												<tr>
-													<!-- tr begin -->
+										<tbody>
+											<!-- tbody begin -->
 
-													<td> 22 </td>
-													<td>
+											<tr>
+												<!-- tr begin -->
 
-														bhififdbvybu@outlook.com
-													</td>
-													<td> 1151544873 </td>
-													<td> 24 </td>
-													<td> 1 </td>
-													<td> </td>
-													<td>
+												<td> 22 </td>
+												<td>
 
-														pendente
-													</td>
+													bhififdbvybu@outlook.com
+												</td>
+												<td> 1151544873 </td>
+												<td> 24 </td>
+												<td> 1 </td>
+												<td> </td>
+												<td>
 
-												</tr><!-- tr finish -->
+													pendente
+												</td>
 
-												<tr>
-													<!-- tr begin -->
+											</tr><!-- tr finish -->
 
-													<td> 21 </td>
-													<td>
+											<tr>
+												<!-- tr begin -->
 
-														star@senac.com.br
-													</td>
-													<td> 435861195 </td>
-													<td> 18 </td>
-													<td> 1 </td>
-													<td> 1 </td>
-													<td>
+												<td> 21 </td>
+												<td>
 
-														Completo
-													</td>
+													star@senac.com.br
+												</td>
+												<td> 435861195 </td>
+												<td> 18 </td>
+												<td> 1 </td>
+												<td> 1 </td>
+												<td>
 
-												</tr><!-- tr finish -->
+													Completo
+												</td>
 
-											</tbody><!-- tbody finish -->
+											</tr><!-- tr finish -->
 
-										</table><!-- table table-hover table-striped table-bordered finish -->
-									</div><!-- table-responsive finish -->
+										</tbody><!-- tbody finish -->
 
-									<div class="text-right">
-										<!-- text-right begin -->
+									</table><!-- table table-hover table-striped table-bordered finish -->
+								</div><!-- table-responsive finish -->
 
-										<a href="index.php?view_orders">
-											<!-- a href begin -->
+								<div class="text-right">
+									<!-- text-right begin -->
 
-											Ver Todos candidatos <i class="fa fa-arrow-circle-right"></i>
+									<a href="index.php?view_orders">
+										<!-- a href begin -->
 
-										</a><!-- a href finish -->
+										Ver Todos candidatos <i class="fa fa-arrow-circle-right"></i>
 
-									</div><!-- text-right finish -->
+									</a><!-- a href finish -->
 
-								</div><!-- panel-body finish -->
+								</div><!-- text-right finish -->
 
-							</div><!-- panel panel-primary finish -->
-						</div><!-- col-lg-8 finish -->
+							</div><!-- panel-body finish -->
 
-						<div class="col-md-4 mx-auto box">
-							<!-- col-md-4 begin -->
-							<div class="panel">
-								<!-- panel begin -->
-								<div class="panel-body">
-									<!-- panel-body begin -->
-									<div class="mb-md thumb-info">
-										<!-- mb-md thumb-info begin -->
+						</div><!-- panel panel-primary finish -->
+					</div><!-- col-lg-8 finish -->
 
-										<img class="rounded mx-auto d-block" src="../uploads/<?=$dados['Img']?>" style="width: 200px;">
+					<div class="col-md-4 mx-auto box">
+						<!-- col-md-4 begin -->
+						<div class="panel">
+							<!-- panel begin -->
+							<div class="panel-body">
+								<!-- panel-body begin -->
+								<div class="mb-md thumb-info">
+									<!-- mb-md thumb-info begin -->
 
-										<div class="thumb-info-title">
-											<!-- thumb-info-title begin -->
+									<img class="rounded mx-auto d-block" src="../uploads/<?=$dados['Img']?>"
+										style="width: 200px;">
 
-											<span class="thumb-info-inner"> <?=$dados['nome']?> </span>
-											<span class="thumb-info-type">Cadastro como<br><?=$dados['tipo']?> </span>
+									<div class="thumb-info-title">
+										<!-- thumb-info-title begin -->
 
-										</div><!-- thumb-info-title finish -->
+										<span class="thumb-info-inner"> <?=$dados['nome']?> </span>
+										<span class="thumb-info-type">Cadastro como<br><?=$dados['tipo']?> </span>
 
-									</div><!-- mb-md thumb-info finish -->
+									</div><!-- thumb-info-title finish -->
 
-									<div class="mb-md">
-										<!-- mb-md begin -->
-										<div class="widget-content-expanded">
-											<!-- widget-content-expanded begin -->
-											<i class="fa fa-user"></i> <span> Email: </span> <?=$dados['email']?> <br>
-											<i class="fa fa-flag"></i> <span> Cidade: </span> brasil <br>
-											<i class="fa fa-envelope"></i> <span> Contato: </span> 11965782876 <br>
-										</div><!-- widget-content-expanded finish -->
+								</div><!-- mb-md thumb-info finish -->
 
-										<hr class="dotted short">
+								<div class="mb-md">
+									<!-- mb-md begin -->
+									<div class="widget-content-expanded">
+										<!-- widget-content-expanded begin -->
+										<i class="fa fa-user"></i> <span> Email: </span> <?=$dados['email']?> <br>
+										<i class="fa fa-flag"></i> <span> Cidade: </span> brasil <br>
+										<i class="fa fa-envelope"></i> <span> Contato: </span> 11965782876 <br>
+									</div><!-- widget-content-expanded finish -->
 
-										<h5 class="text-muted"> Sobre </h5>
+									<hr class="dotted short">
 
-										<p>
-											<!-- p begin -->
+									<h5 class="text-muted"> Sobre </h5>
 
-											mais bonito
-										</p><!-- p finish -->
+									<p>
+										<!-- p begin -->
 
-									</div><!-- mb-md finish -->
+										mais bonito
+									</p><!-- p finish -->
 
-								</div><!-- panel-body finish -->
-							</div><!-- panel finish -->
-						</div><!-- col-md-4 finish -->
+								</div><!-- mb-md finish -->
 
-					</div><!-- row no: 3 finish -->
+							</div><!-- panel-body finish -->
+						</div><!-- panel finish -->
+					</div><!-- col-md-4 finish -->
 
-				</div><!-- container-fluid finish -->
-			</div>
+				</div><!-- row no: 3 finish -->
+
+			</div><!-- container-fluid finish -->
+		</div>
 	</section>
