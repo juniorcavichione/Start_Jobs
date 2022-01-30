@@ -75,10 +75,22 @@
                 <li class="icon solid fa-home">R. Francisco Coimbra, 403 - Penha de França, São Paulo - SP, 03639-000
                 </li>
             </ul>
+
+
         </section>
 
         <!-- Footer -->
         <footer id="footer">
+        <ul class="icons">
+		<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+		<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank" class="icon brands fa-github"><span
+					class="label">Github</span></a></li>
+		<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+		
+		
+		
+	</ul>
             <p class="copyright">&copy; Diretos reservado: Alunos Senac Penha - Desenvolvedor Web Full Stack<p>
         </footer>
 

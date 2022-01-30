@@ -84,7 +84,7 @@ class Categoria {
         count(v.id) as quantidade
         FROM categorias c
         LEFT JOIN
-        vaga v ON v.categorias_id = c.id
+        vaga v ON v.categoria_id = c.id
         GROUP BY
         c.id,
         c.nome

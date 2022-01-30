@@ -21,7 +21,7 @@
                 <li>
                     <span class="opener">Vagas por área</span>
                     <ul>
-                        <li><a href="#">Inserir</a></li>
+                        <li><a href="index.php?inserir-vaga">Inserir</a></li>
                         <li><a href="#">Visualizar</a></li>
                         <li><a href="#">Pretendentes</a></li>
                         <li><a href="#">Serviços Gerais</a></li>
