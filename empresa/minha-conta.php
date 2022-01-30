@@ -6,10 +6,10 @@
 	?>
 
 	<!-- Banner -->
-	<section id="banner">
+	<section>
 		<div class="content">
 			<header>
-				<pre><?php var_dump($dados) ?> </pre>
+				<pre><?php //var_dump($dados) ?> </pre>
 				<h1>Minha Conta Empresa</h1>
 				<p>Site responsível</p>
 			</header>
@@ -309,7 +309,7 @@
 								<div class="text-right">
 									<!-- text-right begin -->
 
-									<a href="index.php?view_orders">
+									<a href="index.php?listar-pretedente">
 										<!-- a href begin -->
 
 										Ver Todos candidatos <i class="fa fa-arrow-circle-right"></i>

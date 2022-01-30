@@ -68,7 +68,7 @@ if(isset($_GET['vaga-excluida'])){
                     </tbody>
                 </table>
 	        <ul class="actions">
-	            <li><a href="vagas.php" class="button big">Página de vagas</a></li>
+	            <li><a href="index.php?inserir-vaga" class="button big">Inserir vagas</a></li>
 	        </ul>
 	    </div>
 	</section>
