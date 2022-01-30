@@ -21,13 +21,20 @@ if(isset($_GET['exit'])){
 				} if(isset($_GET['editar-conta'])){
 					include("editar-conta.php");
 				}if(isset($_GET['minha-vaga'])){
-					include("minha-vaga.php");
+					include("listar-vaga.php");
 				} if(isset($_GET['excluir-conta'])){
 					include("excluir-conta.php");
-				}				
+				}if(isset($_GET['inserir-vaga'])){
+					include("inserir-vaga.php");
+				}if(isset($_GET['inserido-sucesso'])){
+					include("listar-vaga.php");
+				}if(isset($_GET['editar-vaga'])){
+					include("editar-vaga.php");
+				}						
 				?>			
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php');?>
 	</div>
+
 	<?php include_once('./includes/footer.php');?>
