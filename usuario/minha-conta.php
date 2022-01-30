@@ -4,7 +4,6 @@
 	$usuario->setId($_SESSION['id']);
 	$dados = $usuario->lerUmUsuario();	
 	?>
-
 	<!-- Banner -->
 	<section id="banner">
 		<div class="content">
