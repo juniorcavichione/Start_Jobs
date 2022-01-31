@@ -22,7 +22,7 @@
 
 		
 			<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-				<li><a class="dropdown-item" href="<?php if($_SESSION['tipo'] == "empresa"){echo "./empresa/index.php?minha-conta";}else { echo "./usuario/index.php?minha-conta";} ?>">Minha Conta</a></li>
+				<li><a class="dropdown-item" href="<?php if($_SESSION['tipo'] == "empresa"){echo "./index.php?minha-conta";}else { echo "./usuario/index.php?minha-conta";} ?>">Minha Conta</a></li>
 				<li><a class="dropdown-item" href="#">Perfil</a></li>
 				<li><a class="dropdown-item" href="#">Excluir conta</a></li>
 				<li>
