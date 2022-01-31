@@ -4,7 +4,6 @@ include_once('./includes/cabecalho.php');
 require_once "src/Acesso.php";
 require_once "src/Usuario.php";
 
-$sessao = new Acesso;
 $usuario = new Usuario;
 
 use PHPMailer\PHPMailer\PHPMailer;
