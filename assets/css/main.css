@@ -2827,7 +2827,11 @@ button:disabled,
 
 @media screen and (max-width: 1680px) {
     #main>.inner {
+<<<<<<< HEAD
+        padding: 0 1rem 0.1em 1em;
+=======
         padding: 0 0.1rem 0.1em 5em;
+>>>>>>> 4fc038796c81cc56dd25f32e829b293087d002e1
     }
     #main>.inner>section {
         padding: 5em 0 3em 0;
