@@ -49,7 +49,7 @@ class Vaga
 
     public function inserirVaga()
     {
-        $sql = "INSERT INTO vaga(nome, salario, localidade, descricao, beneficio, data, categoria_id) VALUES(:nome, :salario, :localidade, :descricao, :beneficio, :data, :categoria_id)";
+        $sql = "INSERT INTO vaga(nome, salario, localidade, descricao, beneficio, data, categoria_id, empresa_id) VALUES(:nome, :salario, :localidade, :descricao, :beneficio, :data, :categoria_id, :id_usuario)";
 
 
         try {
@@ -61,6 +61,7 @@ class Vaga
             $consulta->bindParam(":beneficio", $this->beneficio, PDO::PARAM_STR);
             $consulta->bindParam(":data", $this->data, PDO::PARAM_STR);
             $consulta->bindParam(":categoria_id", $this->categoria_id, PDO::PARAM_INT);
+            $consulta->bindParam("id_usuario", $this->id_usuario, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: " . $erro->getMessage());
