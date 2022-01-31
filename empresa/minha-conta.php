@@ -11,6 +11,9 @@
 
 	$contaprete = $vaga->ContaInteresse();
 	$contavaga = $vaga->ContaVaga();
+
+	$vaga->setIdusuario($_SESSION['id']);
+	$tabinter = $vaga->mostraInteressados();
 	?>
 
 	<!-- Banner -->
@@ -257,9 +260,9 @@
 											<tr>
 												<!-- th begin -->
 
-												<th> Candidato no: </th>
+												<th> Candidato id: </th>
 												<th> Candidato Email: </th>
-												<th> Solicitação No: </th>
+												<th> Candidato No: </th>
 												<th> Vaga ID: </th>
 												<th> Vaga Data: </th>
 												<th> Vaga Qtd: </th>
@@ -270,45 +273,17 @@
 										</thead><!-- thead finish -->
 
 										<tbody>
-											<!-- tbody begin -->
+										<?php foreach($tabinter as $dadostb ){?>
 
 											<tr>
-												<!-- tr begin -->
-
-												<td> 22 </td>
-												<td>
-
-													bhififdbvybu@outlook.com
-												</td>
-												<td> 1151544873 </td>
-												<td> 24 </td>
-												<td> 1 </td>
-												<td> </td>
-												<td>
-
-													pendente
-												</td>
-
-											</tr><!-- tr finish -->
-
-											<tr>
-												<!-- tr begin -->
-
-												<td> 21 </td>
-												<td>
-
-													star@senac.com.br
-												</td>
-												<td> 435861195 </td>
-												<td> 18 </td>
-												<td> 1 </td>
-												<td> 1 </td>
-												<td>
-
-													Completo
-												</td>
-
-											</tr><!-- tr finish -->
+												<td> <?=$dadostb['id_interessados']?> </td>
+												<td><?=$dadostb['id_usuario']?></td>
+												<td> <?=$dadostb['id_vaga']?> </td>
+												<td> <?=$dadostb['solicitacao']?></td>
+												<td> <?=$dadostb['usuario_id']?> </td>
+												<td>pendente</td>
+											</tr>
+											<?php }?>										
 
 										</tbody><!-- tbody finish -->
 
