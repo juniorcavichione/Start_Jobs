@@ -19,8 +19,8 @@
 			<header>
 				<pre><?php //var_dump($dados) ?> </pre>
 				<h1>Minha Conta Empresa</h1>
-				<p>Site responsível</p>
-				<pre><?php echo $contaprete;?></pre>
+				<p>Painel Administrativo</p>
+				<pre><?php //echo $contaprete;?></pre>
 			</header>
 			<!-- #page-wrapper begin -->
 			<div class="container-fluid">
