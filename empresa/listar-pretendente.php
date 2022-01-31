@@ -1,3 +1,12 @@
+	<?php 
+	require_once "../src/Vaga.php";
+
+	$vaga = new Vaga;
+
+	$contaprete = $vaga->ContaInteresse();
+	
+	?>
+	
 	<!-- Banner -->
 	<section id="banner">
 		<div class="content">

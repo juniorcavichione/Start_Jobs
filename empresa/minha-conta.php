@@ -1,8 +1,16 @@
 	<?php 
 	require_once "../src/Usuario.php";
+	require_once "../src/Vaga.php";
+
 	$usuario = new Usuario;
 	$usuario->setId($_SESSION['id']);
 	$dados = $usuario->lerUmUsuario();	
+
+	$vaga = new Vaga;
+	$vaga->setIdusuario($_SESSION['id']);
+
+	$contaprete = $vaga->ContaInteresse();
+	$contavaga = $vaga->ContaVaga();
 	?>
 
 	<!-- Banner -->
@@ -12,6 +20,7 @@
 				<pre><?php //var_dump($dados) ?> </pre>
 				<h1>Minha Conta Empresa</h1>
 				<p>Site responsível</p>
+				<pre><?php echo $contaprete;?></pre>
 			</header>
 			<!-- #page-wrapper begin -->
 			<div class="container-fluid">
@@ -86,7 +95,7 @@
 
 									<div class="col-xs-9 text-right">
 										<!-- col-xs-9 text-right begin -->
-										<div class="huge"> 14 </div>
+										<div class="huge"> <?php echo $contaprete;?></div>
 
 										<div> Candidatos </div>
 
@@ -136,7 +145,7 @@
 
 									<div class="col-xs-9 text-rig">
 										<!-- col-xs-9 text-right begin -->
-										<div class="huge"> 1 </div>
+										<div class="huge"> <?php echo $contavaga;?> </div>
 
 										<div> Vagas Categorias </div>
 
