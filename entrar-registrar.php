@@ -179,8 +179,8 @@ if ($_SESSION['tipo'] != "") {
 										</div>
 										<button name="recupe" value="Recuperar" class="button primary fit"><i
 												class="fa fa-sign-in"></i> Recuperar</button>
-										<input type="submit" value="Recuperar" name="recupe"
-											class="button primary fit" />
+										<!-- <input type="submit" value="Recuperar" name="recupe"
+											class="button primary fit" /> -->
 										<hr class="my-4">
 										<h2 class="fs-5 fw-bold mb-3">Ou tambem pode</h2>
 										<a id="recupera_voltar_logar" class="button primary fit mb-3" type="button">
