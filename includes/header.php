@@ -33,8 +33,8 @@
 		</li>
 		<?php if(!isset($_SESSION['tipo'])){
 			echo "<a href='entrar-registrar.php' id='login' class='button big'>Entrar / Registrar</a>";
-			}else{
-			echo "<a href='?sair' id='login' class='button big'>Sair</a>";	
+			// }else{
+			// echo "<a href='?sair' id='login' class='button big'>Sair</a>";	
 			}?></li>
 		
 	</ul>
