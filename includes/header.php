@@ -8,7 +8,7 @@
 					class="label">Github</span></a></li>
 		<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 
-		<!-- <li>
+		<li>
 			<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
 				data-bs-toggle="dropdown" aria-expanded="false">
 				<img src="./uploads/<?php echo $_SESSION['Img'];?>" alt="mdo" width="32" height="32" class="rounded-circle mt-3">
@@ -22,7 +22,7 @@
 				</li>
 				<li><a class="dropdown-item" href="index.php?sair">Sair</a></li>
 			</ul>
-		</li> -->
+		</li>
 		<?php if(!isset($_SESSION['tipo'])){
 			echo "<a href='entrar-registrar.php' id='login' class='button big'>Entrar / Registrar</a>";
 			}else{
