@@ -9,9 +9,7 @@ if(isset($_GET['sair'])){
 ?>
 <!DOCTYPE HTML>
 <html>
-
 <head>
-
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Inserindo tags metas -->

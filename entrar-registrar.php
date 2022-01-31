@@ -1,5 +1,4 @@
 <?php
-
 include_once('./includes/cabecalho.php');
 require_once "src/Acesso.php";
 require_once "src/Usuario.php";
@@ -17,9 +16,7 @@ require './phpMailer/SMTP.php';
 if(isset($_SESSION['tipo'])) {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	echo "<script>window.open('index.php','_self')</script>";
-}
-?>
-
+}?>
 <body class="is-preload">
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -27,7 +24,7 @@ if(isset($_SESSION['tipo'])) {
 		<div id="main">
 			<div class="inner">
 				<!-- Header -->
-				<?php include "includes/header.php" ?>
+				<?php include "includes/header.php"?>
 
 				<!--====================================================
 				  LOGAR OU REGISTRAR
