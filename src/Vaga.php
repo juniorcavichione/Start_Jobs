@@ -96,7 +96,7 @@ class Vaga
             die("Erro: " . $erro->getMessage());
         }
     }
-    /* CONTADOR DE INTERESSES */
+    /* CONTADOR DE INTERESSES PAINEL ADM*/
     public function ContaInteresse()
     {
         $sql = "SELECT COUNT(*) FROM interessados WHERE usuario_id = :id_usuario";
@@ -113,7 +113,7 @@ class Vaga
     } // fim lerUmVaga
     /* FIM CONTADOR */
 
-    /* CONTADOR VAGAS POR ID */
+    /* CONTADOR VAGAS POR ID PAINEL ADM*/
     public function ContaVaga()
     {
         $sql = "SELECT COUNT(*) FROM vaga WHERE empresa_id = :id_usuario";
@@ -129,7 +129,7 @@ class Vaga
         return $resultado;
     } // fim lerUmVaga
 
-    /* FIM CONTA VAGA */
+    /* FIM CONTA VAGA PAINEL ADM*/
     public function contaInteressados(): array
     {
         $sql = "SELECT COUNT(*) FROM interessados WHERE id_usuario = :id_usuario";
@@ -146,6 +146,28 @@ class Vaga
         return $resultado;
     } // fim lerUmVaga
     ////FIM INTERESSADOS
+
+    /* MOSTRAR TABELA INTERESSADOS POR PAINEL ADM LIMIT 3 */
+
+
+    public function mostraInteressados(){
+        $sql = "SELECT * FROM interessados WHERE usuario_id = :id_usuario LIMIT 3";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            //$consulta->bindParam("id_vaga", $this->id_vaga, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetchall(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die("Erro: " . $erro->getMessage());
+        }
+        return $resultado;
+    } // fim lerUmVaga
+    ////FIM INTERESSADOS
+
+
+    ////////////////// FRONT USUARIOS/////////////////
 
     public function lerUmaVaga()
     {
