@@ -7,6 +7,7 @@ $vaga = new Vaga;
 date_default_timezone_set('America/Sao_Paulo');
 $data = date('Y-m-d H:i');
 if (isset($_POST['inserir'])) {
+    $vaga->setIdusuario($_SESSION['id']);
     $vaga->setNome($_POST['nome']);
     $vaga->setCategoriaId($_POST['categoria']);
     $vaga->setLocalidade($_POST['localidade']);
