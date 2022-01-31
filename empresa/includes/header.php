@@ -7,7 +7,6 @@
 		<li><a href="https://github.com/juniorcavichione/Start_Jobs" target="_blank" class="icon brands fa-github"><span
 					class="label">Github</span></a></li>
 		<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-
 		<li>
 		<?php if(isset($_SESSION['tipo'])) {?>
 			<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">				
