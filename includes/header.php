@@ -22,10 +22,10 @@
 				<li><a class="dropdown-item" href="index.php?sair">Sair</a></li>
 			</ul>
 		</li> -->
-		<?php if($_SESSION['tipo'] != ""){
-			echo "<a href='?sair' id='login' class='button big'>Sair</a>";
+		<?php if(!isset($_SESSION['tipo'])){
+			echo "<a href='entrar-registrar.php' id='login' class='button big'>Entrar / Registrar</a>";
 			}else{
-				echo "<a href='entrar-registrar.php' id='login' class='button big'>Entrar / Registrar</a>";
+			echo "<a href='?sair' id='login' class='button big'>Sair</a>";	
 			}?></li>
 		
 	</ul>
