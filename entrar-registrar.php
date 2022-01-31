@@ -14,7 +14,7 @@ require './phpMailer/Exception.php';
 require './phpMailer/PHPMailer.php';
 require './phpMailer/SMTP.php';
 
-if ($_SESSION['tipo'] != "") {
+if(isset($_SESSION['tipo'])) {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	echo "<script>window.open('index.php','_self')</script>";
 }
