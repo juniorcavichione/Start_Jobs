@@ -16,11 +16,7 @@
 				
 					<img src="../uploads/<?php echo $_SESSION['Img'];?>" alt="mdo" width="32" height="32" class="rounded-circle mt-3"></a>
 				
-				<?php };?>
-				
-				
-
-		
+				<?php };?>		
 			<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
 				<li><a class="dropdown-item" href="<?php if($_SESSION['tipo'] == "empresa"){echo "./empresa/index.php?minha-conta";}else { echo "./usuario/index.php?minha-conta";} ?>">Minha Conta</a></li>
 				<li><a class="dropdown-item" href="#">Perfil</a></li>
