@@ -7,8 +7,6 @@ $vaga = new Vaga;
 $usuario->setId($_GET['id']);
 $listaUser = $usuario->lerUmUsuario();
 
-
-
 ?>	
 	<!-- Banner -->
 	<section id="banner" class="container">
@@ -22,9 +20,9 @@ $listaUser = $usuario->lerUmUsuario();
 				<div class="col-md-6">
 				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 					<div class="col p-4 d-flex flex-column position-static">
-					<strong class="d-inline-block mb-2 text-primary"><?=$listaUser['nome']?></strong>
+					<strong class="d-inline-block mb-2 text-primary">Detalhes candidato</strong>
 					<h3 class="mb-0"><?=$listaUser['nome']?></h3>
-					<div class="mb-1 text-muted"><?=$listaUser['nome']?></div>
+					<div class="mb-1 text-muted"><?=$listaUser['habilidade']?></div>
 					<ul>
 						<li><?=$listaUser['nome']?></li>
 						<li><?=$listaUser['nome']?></li>
@@ -32,7 +30,8 @@ $listaUser = $usuario->lerUmUsuario();
 						<li><?=$listaUser['nome']?></li>
 						<li><?=$listaUser['nome']?></li>
 					</ul>
-					
+					<div class="mb-1 text-muted"><?=$listaUser['habilidade']?></div>
+
 					</div>
 					<div class="col-auto d-none d-lg-block">
 					<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -45,23 +44,23 @@ $listaUser = $usuario->lerUmUsuario();
 					<div class="col p-4 d-flex flex-column position-static">
 					<strong class="d-inline-block mb-2 text-success">Contato</strong>
 					<h3 class="mb-0">Região</h3>
-					<div class="mb-1 text-muted">
+					<div class="mb-1 mt-3 text-muted">
 						<span class="pull-right">
 							<i class="fa fa-map-marker"></i>
-						</span>Endereço: <?=$listaUser['endereco']?>
+						</span>Cidade: <?=$listaUser['endereco']?>
 					</div>
 					<p class="mb-auto"><span class="pull-right">
 					<i class="fa fa-envelope"></i>
-						</span>Email:<?=$listaUser['email']?>
+						</span>Email: <?=$listaUser['email']?>
 					</p>
 					<p class="mb-auto"><span class="pull-right">
-					<i class="fa fa-map-marker"></i>
-						</span>Telefone<?=$listaUser['email']?>
+					<i class="fa fa-child"></i>
+						</span>Sexo: <?=$listaUser['sexo']?>
 					</p>
 					<p class="mb-auto"><span class="pull-right">
-					<i class="fa fa-map-marker"></i>
-						</span>Telefone<?=$listaUser['email']?>
-					</p>
+					<i class="fa fa-phone"></i>
+						</span>Telefone: <?=$listaUser['telefone']?>
+					</p>					
 					<div class="mt-3">
 					<a href="index.php?contratar-candidato" class="button big">Contratar</a>
 					</div>
