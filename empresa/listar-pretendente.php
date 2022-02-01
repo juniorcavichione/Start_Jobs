@@ -2,9 +2,9 @@
 	require_once "../src/Vaga.php";
 
 	$vaga = new Vaga;
-
 	$contaprete = $vaga->ContaInteresse();
-	
+	$vaga->setIdusuario($_SESSION['id']);
+	$tabinter = $vaga->mostraInteressado();
 	?>
 	
 	<!-- Banner -->
@@ -42,43 +42,19 @@
 						<tbody>
 							<!-- tbody begin -->
 
-							<tr>
-								<!-- tr begin -->
+							<?php foreach($tabinter as $dadostb ){?>
 
-								<td> 22 </td>
-								<td>
+								<tr>
+									<td> <?=$dadostb['id_interessados']?> </td>
+									<td><?=$dadostb['id_usuario']?></td>
+									<td> <?=$dadostb['id_vaga']?> </td>
+									<td> <?=$dadostb['solicitacao']?></td>
+									<td> <?=$dadostb['usuario_id']?> </td>
+									<td> <?=$dadostb['usuario_id']?> </td>
 
-									bhififdbvybu@outlook.com
-								</td>
-								<td> 1151544873 </td>
-								<td> 24 </td>
-								<td> 1 </td>
-								<td> </td>
-								<td>
-
-									pendente
-								</td>
-
-							</tr><!-- tr finish -->
-
-							<tr>
-								<!-- tr begin -->
-
-								<td> 21 </td>
-								<td>
-
-									star@senac.com.br
-								</td>
-								<td> 435861195 </td>
-								<td> 18 </td>
-								<td> 1 </td>
-								<td> 1 </td>
-								<td>
-
-									Completo
-								</td>
-
-							</tr><!-- tr finish -->
+									<td>pendente</td>
+								</tr>
+								<?php }?>
 
 						</tbody><!-- tbody finish -->
 
