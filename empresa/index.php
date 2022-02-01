@@ -35,6 +35,8 @@ if(isset($_GET['exit'])){
 				}
 				if(isset($_GET['editar-vaga'])){
 					include("editar-vaga.php");
+				}	if(isset($_GET['detalhe-candidato'])){
+					include("detalhe-candidato.php");
 				}						
 				?>			
 			</div>
