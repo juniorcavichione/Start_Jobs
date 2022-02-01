@@ -7,6 +7,13 @@ $vaga = new Vaga;
 $usuario->setId($_GET['id']);
 $listaUser = $usuario->lerUmUsuario();
 
+if(isset($_POST['contratar'])){
+	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
+
+	$vaga->setNome($listaUser['nome']);
+	$vaga->setIdusuario($_GET['id']);
+}
+
 ?>	
 	<!-- Banner -->
 	<section id="banner" class="container">
@@ -23,11 +30,11 @@ $listaUser = $usuario->lerUmUsuario();
 					<strong class="d-inline-block mb-2 text-primary">Detalhes candidato</strong>
 					<h3 class="mb-0"><?=$listaUser['nome']?></h3>
 					<div class="mb-1 text-muted"><?=$listaUser['habilidade']?></div>
-					<!-- <ul>
-						<li><?=$listaUser['nome']?></li>
+					<ul>
+						<li><?php echo $_GET['id'];?></li>
 						<li><?=$listaUser['nome']?></li>
 						
-					</ul> -->
+					</ul>
 					<div class="mb-1 text-muted"><?=$listaUser['sobre']?></div>
 
 				
@@ -60,10 +67,13 @@ $listaUser = $usuario->lerUmUsuario();
 					<p class="mb-auto"><span class="pull-right">
 					<i class="fa fa-phone"></i>
 						</span>Telefone: <?=$listaUser['telefone']?>
-					</p>					
+					</p>			
 					<div class="mt-3">
-					<a href="index.php?contratar-candidato" class="button big">Contratar</a>
+					<form action="" method="POST">	
+					<input href="index.php?contratar-candidato" name="contratar" type="submit" value="Contratar" class="button big">
+					</form>	
 					</div>
+					
 					
 					</div>
 					<div class="col-auto d-none d-lg-block">
