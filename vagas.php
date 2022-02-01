@@ -22,7 +22,7 @@
 				
                 <input placeholder="Pesquise aqui" type="search" name="busca" id="busca" class="form-control mr-2">
 
-                <button class="btn btn-primary" type="submit" >OK</button>
+                <button class="btn " type="submit" >OK</button>
             </form>
 
 
