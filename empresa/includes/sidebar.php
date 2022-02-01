@@ -14,17 +14,25 @@
             </header>
             <ul>
                 <li><a href="?minha-conta">Minha Conta</a></li>
-                <li><a href="?minha-vaga">Vagas</a></li>
                 <li>
                     <span class="opener">Vagas</span>
                     <ul>
                         <li><a href="index.php?inserir-vaga">Inserir</a></li>
-                        <li><a href="index.php?visualizar-vaga">Visualizar</a></li>
-                        <li><a href="index.php?listar-pretedente">Pretendentes</a></li>
+                        <li><a href="index.php?editar-vaga">Editar</a></li>
+                        <li><a href="index.php?minha-vaga">Visualizar</a></li>
+                        <li><a href="">Pretendentes</a></li>
                         <li><a href="#">Serviços Gerais</a></li>
                     </ul>
                 </li>
-                <li><a href="index.php?editar-conta">Editar</a></li>
+                <li>
+                    <span class="opener">Candidatos</span>
+                    <ul>
+                        <li><a href="index.php?minha-vaga">Contratação</a></li>
+                        <li><a href="index.php?listar-pretedente">Listar candidatos</a></li>
+                        <li><a href="index.php?editar-vaga">Editar</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="index.php?editar-conta">Editar conta</a></li>
                 <li><a href="index.php?excluir-conta">Excluir conta</a></li>
             </ul>
         </nav>
