@@ -19,6 +19,13 @@ class Vaga
     private $id_vaga;
     private $solicitacao;
 
+    ///CONTRATADO
+    private $contrato_id;
+    private $whatsapp;
+    private $email;
+    
+    
+
 
     ///Busca
     private  $termo;
@@ -207,10 +214,6 @@ class Vaga
 
 
     ////////////////// FRONT USUARIOS/////////////////
-
-   
-
-
     public function atualizarVaga()
     {
         $sql = "UPDATE vaga SET nome = :nome, categoria_id = :categoria_id, descricao = :descricao, beneficio = :beneficio,
@@ -281,11 +284,7 @@ class Vaga
     {
         $rData = implode("-", array_reverse(explode("/", trim($data))));
         return $rData;
-    }
-
-
-
-   
+    }   
 
 
     /* GETTERS INTERESSADOS*/
@@ -337,7 +336,7 @@ class Vaga
     }
     /* FIM SETTERS BUSCA */
 
-    
+
 
      /* GETTERS VAGAS*/
      public function getId(): int
