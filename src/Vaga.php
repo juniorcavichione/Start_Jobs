@@ -18,6 +18,8 @@ class Vaga
     private $id_usuario;
     private $id_vaga;
     private $solicitacao;
+
+
     ///Busca
     private  $termo;
 
@@ -283,7 +285,7 @@ class Vaga
 
 
 
-    /* Getters */
+    /* GETTERS VAGAS*/
     public function getId(): int
     {
         return $this->id;
@@ -320,10 +322,10 @@ class Vaga
     {
         return $this->termo;
     }
+    /* FIM GETTERS VAGAS*/
 
 
     /* Getters interessados*/
-
     public function getIdintere(): int
     {
         return $this->id_interessados;
@@ -343,7 +345,6 @@ class Vaga
 
 
     /* Setters interessados*/
-
     public function setIdintere(int $id_interessados)
     {
         $this->id_interessados = filter_var($id_interessados, FILTER_SANITIZE_NUMBER_INT);
@@ -360,10 +361,12 @@ class Vaga
     {
         $this->solicitacao = filter_var($solicitacao, FILTER_SANITIZE_STRING);
     }
+    /* FIM SETTERS */
 
 
 
     /* Setters */
+
     public function setTermo(string $termo)
     {
         $this->termo = filter_var($termo, FILTER_SANITIZE_STRING);
@@ -379,30 +382,32 @@ class Vaga
     }
     public function setSalario($salario)
     {
-        $this->salario = filter_var(
-            $salario,
-            FILTER_SANITIZE_NUMBER_FLOAT,
-            FILTER_FLAG_ALLOW_FRACTION
-        );
+        $this->salario = filter_var($salario, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     }
     public function setLocalidade(string $localidade)
     {
         $this->localidade = filter_var($localidade, FILTER_SANITIZE_STRING);
     }
+
     public function setDescricao(string $descricao)
     {
         $this->descricao = filter_var($descricao, FILTER_SANITIZE_STRING);
     }
+
     public function setBeneficio($beneficio)
     {
         $this->beneficio = filter_var($beneficio, FILTER_SANITIZE_STRING);
     }
+
     public function setData(string $data)
     {
         $this->data = filter_var($data, FILTER_SANITIZE_STRING);
     }
+
     public function setCategoriaId($categoria_id)
     {
         $this->categoria_id = filter_var($categoria_id, FILTER_SANITIZE_NUMBER_INT);
     }
+
+    /* FIM SETTERS */
 }
