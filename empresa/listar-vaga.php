@@ -6,7 +6,9 @@ $vaga = new Vaga;
 $categoria = new Categoria;
 
 $listarCategoria = $categoria->lerCategorias();
-$listarVagas = $vaga->lerVagas();
+
+$vaga->setIdusuario($_SESSION['id']);
+$listarVagas = $vaga->lerminhaVaga();
 
 
 //detectar os parametros de url
@@ -36,7 +38,10 @@ if(isset($_GET['vaga-excluida'])){
 	        </header>
 	        <p>Vamos te ajudar na busca do emprego desejado, temos vagas em diversos segmentos.</p>
 	        <p>Temos vagas de:</p>
-	        <table class="table table-striped table-sm">
+            <div class="panel-body mx-1 box">
+				<!-- panel-body begin -->
+				<div class="table-responsive">
+	        <table class="table table-hover table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>id</th>
@@ -60,13 +65,15 @@ if(isset($_GET['vaga-excluida'])){
                                 <td><?= $dados['beneficio'] ?></td>
                                 <td class="btn-group mr-2">
                                     <a type="button" href="index.php?id=<?= $dados['id'] ?>&editar-vaga" class="btn btn-sm btn-outline-secondary">Atualizar</a>
-                                    <a type="button" href="excluir-vaga.php?id=<?= $dados['id'] ?>" id="button" class="btn btn-sm btn-outline-danger delete-person">excluir</a>
+                                    <a type="button" href="excluir-vaga.php?id=<?= $dados['id'] ?>" id="button" class="btn btn-sm btn-outline-danger">excluir</a>
 
                                 </td>
                             </tr>
                         <?php } ?>
                     </tbody>
                 </table>
+                </div>
+            </div>
 	        <ul class="actions">
 	            <li><a href="index.php?inserir-vaga" class="button big">Inserir vagas</a></li>
 	        </ul>
