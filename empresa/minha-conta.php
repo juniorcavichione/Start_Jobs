@@ -15,7 +15,6 @@
 	$vaga->setIdusuario($_SESSION['id']);
 	$tabinter = $vaga->mostraInteressados();
 	?>
-
 	<!-- Banner -->
 	<section>
 		<div class="content">
@@ -50,7 +49,7 @@
 										<!-- col-xs-9 text-right begin -->
 										<div class="huge"> 8 </div>
 
-										<div> Vagas </div>
+										<div> Contratados </div>
 
 									</div><!-- col-xs-9 text-right finish -->
 
@@ -274,12 +273,12 @@
 
 										<tbody>
 										<?php foreach($tabinter as $dadostb ){?>
-
 											<tr>
 												<td> <?=$dadostb['id_interessados']?> </td>
 												<td><?=$dadostb['id_usuario']?></td>
 												<td> <?=$dadostb['id_vaga']?> </td>
 												<td> <?=$dadostb['solicitacao']?></td>
+												<td> <?=$dadostb['usuario_id']?> </td>
 												<td> <?=$dadostb['usuario_id']?> </td>
 												<td>pendente</td>
 											</tr>
