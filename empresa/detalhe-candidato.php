@@ -6,12 +6,15 @@ $vaga = new Vaga;
 
 $usuario->setId($_GET['id']);
 $listaUser = $usuario->lerUmUsuario();
+$linkzap = 'https://wa.me/55'.$listaUser['telefone'].'?text=Eu%20Gostaria%20de%20saber%20sobre%20Peças';
 
 if(isset($_POST['contratar'])){
-	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	$vaga->setIdusuario($_GET['id']);
 	$vaga->setNome($listaUser['nome']);
-	
+	$vaga->setEmail($listaUser['email']);
+	$vaga->setWhatsapp($linkzap);
+	$vaga->contratatoUser();
+	echo "<script>alert('Voçe contratou com sucesso ;-)')</script>";
 }
 
 ?>	
@@ -36,7 +39,6 @@ if(isset($_POST['contratar'])){
 						
 					</ul>
 					<div class="mb-1 text-muted"><?=$listaUser['sobre']?></div>
-
 				
 
 					</div>
