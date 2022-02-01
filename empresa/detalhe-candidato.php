@@ -32,8 +32,7 @@ $listaUser = $usuario->lerUmUsuario();
 						<li><?=$listaUser['nome']?></li>
 						<li><?=$listaUser['nome']?></li>
 					</ul>
-					<p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="stretched-link">Continue reading</a>
+					
 					</div>
 					<div class="col-auto d-none d-lg-block">
 					<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -49,7 +48,7 @@ $listaUser = $usuario->lerUmUsuario();
 					<div class="mb-1 text-muted">
 						<span class="pull-right">
 							<i class="fa fa-map-marker"></i>
-						</span>Endereço: <?=$listaUser['email']?>
+						</span>Endereço: <?=$listaUser['endereco']?>
 					</div>
 					<p class="mb-auto"><span class="pull-right">
 					<i class="fa fa-envelope"></i>
