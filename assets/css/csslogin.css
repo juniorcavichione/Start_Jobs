@@ -106,12 +106,14 @@ p {
 .btn-primary {
     background: linear-gradient(135deg, rgba(163, 197, 250, 0.5), rgba(45, 118, 236, 0.89));
     border: none;
-    border-radius: 50px
+    border-radius: 50px;
+   
 }
 
 .btn-primary:focus {
     box-shadow: none;
     border: none
+    
 }
 
 small {
