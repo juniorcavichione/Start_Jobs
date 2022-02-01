@@ -23,7 +23,7 @@ class Vaga
     private $contrato_id;
     private $whatsapp;
     private $email;
-    
+
     
 
 
@@ -286,25 +286,35 @@ class Vaga
         return $rData;
     }   
 
+    /* GETTERS CONTRATADO */
 
-    /* GETTERS INTERESSADOS*/
-    public function getIdintere(): int
-    {
-        return $this->id_interessados;
+    public function getContratoid():int {return $this->contrato_id; }
+    public function getEmail():string {return $this->email;}
+    public function getWhatsapp():string { return $this->whatsapp; }
+    /* FIM GETTERS CONTRATADO */
+
+    /* SETTERS CONTRATADO */
+
+    public function setContratoid(int $contrato_id){
+        $this->contrato_id = filter_var($contrato_id, FILTER_SANITIZE_NUMBER_INT);
     }
-    public function getIdusuario(): int
-    {
-        return $this->id_usuario;
+
+    public function setEmail(string $email){
+        $this->email = filter_var($email, FILTER_SANITIZE_STRING);
     }
-    public function getIdvagas(): int
-    {
-        return $this->id_vaga;
+
+    public function setWhatsapp(string $whatsapp){
+        $this->whatsapp = filter_var($whatsapp, FILTER_SANITIZE_STRING);
     }
-    public function getSolicitacao(): string
-    {
-        return $this->solicitacao;
-    }
-    /* FIM GETTERS INTERESSADOS*/
+    /* SETTERS CONTRATADO FIM */
+
+
+    /* GETTERS INTERESSADOS */
+    public function getIdintere(): int { return $this->id_interessados; }
+    public function getIdusuario(): int { return $this->id_usuario; }
+    public function getIdvagas(): int { return $this->id_vaga; }
+    public function getSolicitacao(): string { return $this->solicitacao; }
+    /* FIM GETTERS INTERESSADOS */
 
 
     /* SETTERS INTERESSADOS*/
