@@ -149,7 +149,6 @@ class Vaga
 
     /* MOSTRAR TABELA INTERESSADOS POR PAINEL ADM LIMIT 3 */
 
-
     public function mostraInteressados(){
         $sql = "SELECT * FROM interessados WHERE usuario_id = :id_usuario LIMIT 3";
 
@@ -185,22 +184,28 @@ class Vaga
     ////FIM INTERESSADOS
 
 
-    ////////////////// FRONT USUARIOS/////////////////
+    /* VAGAS DE ACORDO COM CADA EMPRESA PAINEL ADMIN */
 
-    public function lerUmaVaga()
+    public function lerminhaVaga():array
     {
-        $sql = "SELECT * FROM vaga WHERE id = :id";
+        $sql = "SELECT * FROM vaga WHERE empresa_id = :id_usuario";
 
         try {
             $consulta = $this->conexao->prepare($sql);
-            $consulta->bindParam(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindParam(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
             $consulta->execute();
-            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+            $resultado = $consulta->fetchall(PDO::FETCH_ASSOC);
         } catch (Exception $erro) {
             die("Erro: " . $erro->getMessage());
         }
         return $resultado;
     } // fim lerUmVaga
+    /* FIM VAGAS DE ACORDO COM CADA EMPRESA */
+
+
+    ////////////////// FRONT USUARIOS/////////////////
+
+   
 
 
     public function atualizarVaga()
