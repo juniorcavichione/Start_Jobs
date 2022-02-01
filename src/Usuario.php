@@ -33,6 +33,10 @@ class Usuario
             $consulta->bindParam(':tipo', $this->tipo, PDO::PARAM_STR);
             $consulta->bindParam(':Img', $this->Img, PDO::PARAM_STR);
             $consulta->bindParam(':chave', $this->chave, PDO::PARAM_STR);
+            $consulta->bindParam(':endereco', $this->endereco, PDO::PARAM_STR);
+            $consulta->bindParam(':sobre', $this->sobre, PDO::PARAM_STR);
+            $consulta->bindParam(':sexo', $this->sexo, PDO::PARAM_STR);
+            $consulta->bindParam(':habilidade', $this->habilidade, PDO::PARAM_STR);
 
             $consulta->execute();
         } catch (Exception $erro) {
