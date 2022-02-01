@@ -59,7 +59,7 @@ if(isset($_GET['vaga-excluida'])){
                             <tr>
                                 <td><?= $dados['id'] ?></td>
                                 <td><?= $dados['nome'] ?></td>
-                                <td><?= $dados['categoria'] ?></td>
+                                <td><?= $dados['categoria_id'] ?></td>
                                 <td><?= $dados['localidade'] ?></td>
                                 <td><?= $dados['descricao'] ?></td>
                                 <td><?= $dados['beneficio'] ?></td>
