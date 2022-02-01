@@ -10,16 +10,16 @@
         <!-- Menu -->
         <nav id="menu">
             <header class="major">
-                <a href="?minha-conta"><h2>Minha conta</h2></a>                
+                <a href="../"><h2>Pagina Inicial</h2></a>                
             </header>
             <ul>
-                <li><a href="../">Página Inicial</a></li>
+                <li><a href="?minha-conta">Minha Conta</a></li>
                 <li><a href="?minha-vaga">Vagas</a></li>
                 <li>
-                    <span class="opener">Vagas por área</span>
+                    <span class="opener">Vagas</span>
                     <ul>
                         <li><a href="index.php?inserir-vaga">Inserir</a></li>
-                        <li><a href="#">Visualizar</a></li>
+                        <li><a href="index.php?visualizar-vaga">Visualizar</a></li>
                         <li><a href="index.php?listar-pretedente">Pretendentes</a></li>
                         <li><a href="#">Serviços Gerais</a></li>
                     </ul>
