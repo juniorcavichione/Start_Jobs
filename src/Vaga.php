@@ -23,6 +23,7 @@ class Vaga
     private $contrato_id;
     private $whatsapp;
     private $email;
+    private $empresa_id;
 
     
 
@@ -215,19 +216,19 @@ class Vaga
     /* FUNCAO CONTRATAR */
     public function contratatoUser()
     {
-        $sql = "INSERT INTO contratado(nome, email, whatsapp, usuario_id) VALUES(:nome, :email, :whatsapp, :usuario_id)";
+        $sql = "INSERT INTO contratado(nome, email, whatsapp, usuario_id, empresa_id) VALUES(:nome, :email, :whatsapp, :usuario_id, :empresa_id)";
         try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
             $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
             $consulta->bindParam(":whatsapp", $this->whatsapp, PDO::PARAM_STR);
             $consulta->bindParam(":usuario_id", $this->id_usuario, PDO::PARAM_INT);
+            $consulta->bindParam(":empresa_id", $this->empresa_id, PDO::PARAM_INT);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: " . $erro->getMessage());
         }
     }
-
     /* FIM FUNCAO CONTRATAR */
 
 
@@ -309,6 +310,7 @@ class Vaga
     public function getContratoid():int {return $this->contrato_id; }
     public function getEmail():string {return $this->email;}
     public function getWhatsapp():string { return $this->whatsapp; }
+    public function getEmpresaid():string {return $this->empresa_id; }
     /* FIM GETTERS CONTRATADO */
 
     /* SETTERS CONTRATADO */
@@ -323,6 +325,9 @@ class Vaga
 
     public function setWhatsapp(string $whatsapp){
         $this->whatsapp = filter_var($whatsapp, FILTER_SANITIZE_STRING);
+    }
+    public function setEmpresaid(string $empresa_id){
+        $this->empresa_id = filter_var($empresa_id, FILTER_SANITIZE_STRING);
     }
     /* SETTERS CONTRATADO FIM */
 
