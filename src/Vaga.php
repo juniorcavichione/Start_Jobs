@@ -285,47 +285,10 @@ class Vaga
 
 
 
-    /* GETTERS VAGAS*/
-    public function getId(): int
-    {
-        return $this->id;
-    }
-    public function getNome(): string
-    {
-        return $this->nome;
-    }
-    public function getCategoriaId(): int
-    {
-        return $this->categoria_id;
-    }
-    public function getLocalidade(): string
-    {
-        return $this->localidade;
-    }
-    public function getDescricao(): string
-    {
-        return $this->descricao;
-    }
-    public function getBeneficio(): string
-    {
-        return $this->beneficio;
-    }
-    public function getData(): string
-    {
-        return $this->benefidata;
-    }
-    public function getSalario(): float
-    {
-        return $this->salario;
-    }
-    public function getTermo(): string
-    {
-        return $this->termo;
-    }
-    /* FIM GETTERS VAGAS*/
+   
 
 
-    /* Getters interessados*/
+    /* GETTERS INTERESSADOS*/
     public function getIdintere(): int
     {
         return $this->id_interessados;
@@ -342,9 +305,10 @@ class Vaga
     {
         return $this->solicitacao;
     }
+    /* FIM GETTERS INTERESSADOS*/
 
 
-    /* Setters interessados*/
+    /* SETTERS INTERESSADOS*/
     public function setIdintere(int $id_interessados)
     {
         $this->id_interessados = filter_var($id_interessados, FILTER_SANITIZE_NUMBER_INT);
@@ -365,12 +329,57 @@ class Vaga
 
 
 
-    /* Setters */
+    /* SETTERS BUSCA */
 
     public function setTermo(string $termo)
     {
         $this->termo = filter_var($termo, FILTER_SANITIZE_STRING);
     }
+    /* FIM SETTERS BUSCA */
+
+    
+
+     /* GETTERS VAGAS*/
+     public function getId(): int
+     {
+         return $this->id;
+     }
+     public function getNome(): string
+     {
+         return $this->nome;
+     }
+     public function getCategoriaId(): int
+     {
+         return $this->categoria_id;
+     }
+     public function getLocalidade(): string
+     {
+         return $this->localidade;
+     }
+     public function getDescricao(): string
+     {
+         return $this->descricao;
+     }
+     public function getBeneficio(): string
+     {
+         return $this->beneficio;
+     }
+     public function getData(): string
+     {
+         return $this->benefidata;
+     }
+     public function getSalario(): float
+     {
+         return $this->salario;
+     }
+     public function getTermo(): string
+     {
+         return $this->termo;
+     }
+     /* FIM GETTERS VAGAS*/
+
+
+    /* SETTERS VAGA */
 
     public function setId(int $id)
     {
