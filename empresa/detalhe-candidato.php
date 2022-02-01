@@ -22,15 +22,15 @@ $listaUser = $usuario->lerUmUsuario();
 				<div class="col-md-6">
 				<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 					<div class="col p-4 d-flex flex-column position-static">
-					<strong class="d-inline-block mb-2 text-primary">Nome Completo</strong>
-					<h3 class="mb-0">Featured post</h3>
-					<div class="mb-1 text-muted">Nov 12</div>
+					<strong class="d-inline-block mb-2 text-primary"><?=$listaUser['nome']?></strong>
+					<h3 class="mb-0"><?=$listaUser['nome']?></h3>
+					<div class="mb-1 text-muted"><?=$listaUser['nome']?></div>
 					<ul>
-						<li>Informática | TI</li>
-						<li>Logística</li>
-						<li>Administração</li>
-						<li>Serviços</li>
-						<li>Free Lancer</li>
+						<li><?=$listaUser['nome']?></li>
+						<li><?=$listaUser['nome']?></li>
+						<li><?=$listaUser['nome']?></li>
+						<li><?=$listaUser['nome']?></li>
+						<li><?=$listaUser['nome']?></li>
 					</ul>
 					<p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
 					<a href="#" class="stretched-link">Continue reading</a>
@@ -44,10 +44,23 @@ $listaUser = $usuario->lerUmUsuario();
 				<div class="col-md-6">
 				<div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
 					<div class="col p-4 d-flex flex-column position-static">
-					<strong class="d-inline-block mb-2 text-success">Descrição</strong>
+					<strong class="d-inline-block mb-2 text-success">Contato</strong>
 					<h3 class="mb-0">Região</h3>
-					<div class="mb-1 text-muted">Data candidatura</div>
-					<p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+					<div class="mb-1 text-muted">
+						<span class="pull-right">
+							<i class="fa fa-map-marker"></i>
+						</span>Endereço: <?=$listaUser['email']?>
+					</div>
+					<p class="mb-auto"><span class="pull-right">
+					<i class="fa fa-envelope"></i>
+						</span><?=$listaUser['email']?>
+					</p>
+					<p class="mb-auto"><span class="pull-right">
+					<i class="fa fa-map-marker"></i>
+						</span><?=$listaUser['email']?>
+					</p>
+					<p class="mb-auto"><?=$listaUser['tipo']?></p>
+
 					<a href="index.php?contratar-candidato" class="button big">Contratar</a>
 					</div>
 					<div class="col-auto d-none d-lg-block">
