@@ -36,10 +36,8 @@ if(isset($_SESSION['tipo'])) {
 								<?php if (isset($_POST['entrar'])) {
 									$usuario->setEmail($_POST['email']);
 									$dados = $usuario->buscaUsuario();
-
 									//var_dump($_POST['senha']);
 									//se foi localizado um usuario pelo email
-
 									if ($dados != null) {
 										//então verificamos a senha digitada com o banco
 										if (password_verify($_POST['senha'], $dados['senha'])) {
@@ -56,8 +54,6 @@ if(isset($_SESSION['tipo'])) {
 										$mensagem = "Usuario nao encontrado";
 										$mensagem;
 									}
-
-
 									//echo "<script>alert('estou aqui')</script>";
 								} else {
                                     //$mensagem = "nao foi possivel logar";
