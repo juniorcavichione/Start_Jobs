@@ -13,7 +13,7 @@ class Vaga
     private  $data;
     private  $categoria_id;
 
-    ///interessados
+    ///INTERESSADOS
     private $id_interessados;
     private $id_usuario;
     private $id_vaga;
@@ -27,10 +27,10 @@ class Vaga
     
 
 
-    ///Busca
+    ///BUSCA
     private  $termo;
 
-    ///Conexão
+    ///CONEXÃO
     private  $conexao;
 
     public function __construct()
@@ -52,7 +52,7 @@ class Vaga
             die("Erro: " . $erro->getMessage());
         }
         return $resultado;
-    } // fim lerVagas
+    } // FIM LER VAGAS
 
 
 
@@ -211,6 +211,24 @@ class Vaga
     } // fim lerUmVaga
     
     /* FIM VAGAS DE ACORDO COM CADA EMPRESA */
+
+    /* FUNCAO CONTRATAR */
+    public function contratatoUser()
+    {
+        $sql = "INSERT INTO contratado(nome, email, whatsapp, usuario_id) VALUES(:nome, :email, :whatsapp, :usuario_id)";
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindParam(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindParam(":whatsapp", $this->whatsapp, PDO::PARAM_STR);
+            $consulta->bindParam(":usuario_id", $this->id_usuario, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro: " . $erro->getMessage());
+        }
+    }
+
+    /* FIM FUNCAO CONTRATAR */
 
 
     ////////////////// FRONT USUARIOS/////////////////

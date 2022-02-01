@@ -3,7 +3,6 @@ require_once "../src/Vaga.php";
 require_once "../src/Usuario.php";
 $usuario = new Usuario;
 $vaga = new Vaga;
-
 $usuario->setId($_GET['id']);
 $listaUser = $usuario->lerUmUsuario();
 $linkzap = 'https://wa.me/55'.$listaUser['telefone'].'?text=Eu%20Gostaria%20de%20saber%20sobre%20Peças';
