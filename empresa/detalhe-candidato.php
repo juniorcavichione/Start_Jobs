@@ -15,7 +15,7 @@ $listaUser = $usuario->lerUmUsuario();
 	    <div class="content">
 	        <header>
 	            <h1>Contrata Candidato</h1>
-	            <p>Site responsível</p>
+	            <p>Informações do candidato</p>
 	        </header>		
 			<div class="container py-3">
 			<div class="row mb-2">
@@ -53,17 +53,23 @@ $listaUser = $usuario->lerUmUsuario();
 					</div>
 					<p class="mb-auto"><span class="pull-right">
 					<i class="fa fa-envelope"></i>
-						</span><?=$listaUser['email']?>
+						</span>Email:<?=$listaUser['email']?>
 					</p>
 					<p class="mb-auto"><span class="pull-right">
 					<i class="fa fa-map-marker"></i>
-						</span><?=$listaUser['email']?>
+						</span>Telefone<?=$listaUser['email']?>
 					</p>
-					<p class="mb-auto"><?=$listaUser['tipo']?></p>
-
+					<p class="mb-auto"><span class="pull-right">
+					<i class="fa fa-map-marker"></i>
+						</span>Telefone<?=$listaUser['email']?>
+					</p>
+					<div class="mt-3">
 					<a href="index.php?contratar-candidato" class="button big">Contratar</a>
 					</div>
+					
+					</div>
 					<div class="col-auto d-none d-lg-block">
+						
 					<!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
 
 					</div>
