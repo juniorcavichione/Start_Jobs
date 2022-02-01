@@ -27,8 +27,8 @@
 							<tr>
 								<!-- th begin -->
 
-								<th> Candidato no: </th>
-								<th> Candidato Email: </th>
+								<th> Id Vaga no: </th>
+								<th> Usuario id: </th>
 								<th> Solicitação No: </th>
 								<th> Vaga ID: </th>
 								<th> Vaga Data: </th>
@@ -44,7 +44,7 @@
 
 							<?php foreach($tabinter as $dadostb ){?>
 
-								<tr>
+								<tr onclick="window.location='index.php?detalhe-candidato&id=<?= $dadostb['id_usuario'] ?>'">
 									<td> <?=$dadostb['id_interessados']?> </td>
 									<td><?=$dadostb['id_usuario']?></td>
 									<td> <?=$dadostb['id_vaga']?> </td>
