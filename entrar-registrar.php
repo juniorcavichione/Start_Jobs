@@ -196,11 +196,9 @@ if(isset($_SESSION['tipo'])) {
 									$Img_size =  $_FILES['Img']['size'];
 									$tmp_name =  $_FILES['Img']['tmp_name'];
 									$Img_type = $_FILES['Img']['type'];
-									$error =  $_FILES['Img']['error'];
-								  
+									$error =  $_FILES['Img']['error'];								  
 									//$novo_nome = TratarNomeArquivo($Img); 
-									$diretotio = "./uploads/";
-								  
+									$diretotio = "./uploads/";								  
 									move_uploaded_file($_FILES['Img']['tmp_name'], $diretotio.$Img);
 									//echo "<script>alert('Seu cadastro foi efetuado com sucesso')</script>";
 									$usuario->setNome($_POST['nome-cadastro']);
