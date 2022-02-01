@@ -238,8 +238,8 @@ if(isset($_SESSION['tipo'])) {
 										</div>
 										<div class="form-floating mb-3">
 											<input type="text" class="form-control rounded-4" name="endereco-cadastro"
-												id="senha">
-											<label for="senha">Endereço</label>
+												id="endereco-cadastro">
+											<label for="endereco-cadastro">Endereço</label>
 										</div>
 										<div class="form-floating mb-3">
 											<input type="password" class="form-control rounded-4" name="senha-cadastro"
