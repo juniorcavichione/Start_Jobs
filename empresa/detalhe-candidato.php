@@ -9,9 +9,9 @@ $listaUser = $usuario->lerUmUsuario();
 
 if(isset($_POST['contratar'])){
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
-
-	$vaga->setNome($listaUser['nome']);
 	$vaga->setIdusuario($_GET['id']);
+	$vaga->setNome($listaUser['nome']);
+	
 }
 
 ?>	
