@@ -1,4 +1,13 @@
-<?php require_once "../src/Vaga.php";
+<?php 
+require_once "../src/Vaga.php";
+require_once "../src/Usuario.php";
+$usuario = new Usuario;
+$vaga = new Vaga;
+
+$usuario->setId($_GET['id']);
+$listaUser = $usuario->lerUmUsuario();
+
+
 
 ?>	
 	<!-- Banner -->
