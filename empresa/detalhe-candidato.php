@@ -23,19 +23,19 @@ $listaUser = $usuario->lerUmUsuario();
 					<strong class="d-inline-block mb-2 text-primary">Detalhes candidato</strong>
 					<h3 class="mb-0"><?=$listaUser['nome']?></h3>
 					<div class="mb-1 text-muted"><?=$listaUser['habilidade']?></div>
-					<ul>
+					<!-- <ul>
 						<li><?=$listaUser['nome']?></li>
 						<li><?=$listaUser['nome']?></li>
-						<li><?=$listaUser['nome']?></li>
-						<li><?=$listaUser['nome']?></li>
-						<li><?=$listaUser['nome']?></li>
-					</ul>
-					<div class="mb-1 text-muted"><?=$listaUser['habilidade']?></div>
+						
+					</ul> -->
+					<div class="mb-1 text-muted"><?=$listaUser['sobre']?></div>
+
+				
 
 					</div>
 					<div class="col-auto d-none d-lg-block">
-					<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+					<!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+					<img src="../uploads/<?=$listaUser['Img']?>" alt="mdo" width="200" height="250" class="bd-placeholder-img">
 					</div>
 				</div>
 				</div>
