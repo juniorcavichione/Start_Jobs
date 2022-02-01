@@ -11,11 +11,11 @@ if(isset($_POST['contratar'])){
 	$vaga->setIdusuario($_GET['id']);
 	$vaga->setNome($listaUser['nome']);
 	$vaga->setEmail($listaUser['email']);
+	$vaga->setEmpresaid($_SESSION['id']);
 	$vaga->setWhatsapp($linkzap);
 	$vaga->contratatoUser();
 	echo "<script>alert('Voçe contratou com sucesso ;-)')</script>";
 }
-
 ?>	
 	<!-- Banner -->
 	<section id="banner" class="container">
@@ -34,15 +34,11 @@ if(isset($_POST['contratar'])){
 					<div class="mb-1 text-muted"><?=$listaUser['habilidade']?></div>
 					<ul>
 						<li><?php echo $_GET['id'];?></li>
-						<li><?=$listaUser['nome']?></li>
-						
+						<li><?=$listaUser['nome']?></li>						
 					</ul>
 					<div class="mb-1 text-muted"><?=$listaUser['sobre']?></div>
-				
-
 					</div>
-					<div class="col-auto d-none d-lg-block">
-					<!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+					<div class="col-auto d-none d-lg-block">				
 					<img src="../uploads/<?=$listaUser['Img']?>" alt="mdo" width="200" height="250" class="bd-placeholder-img">
 					</div>
 				</div>
@@ -73,14 +69,9 @@ if(isset($_POST['contratar'])){
 					<form action="" method="POST">	
 					<input href="index.php?contratar-candidato" name="contratar" type="submit" value="Contratar" class="button big">
 					</form>	
-					</div>
-					
-					
+					</div>					
 					</div>
 					<div class="col-auto d-none d-lg-block">
-						
-					<!-- <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-
 					</div>
 				</div>
 				</div>
