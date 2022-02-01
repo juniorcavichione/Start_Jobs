@@ -9,7 +9,11 @@ class Usuario
     private string $senha;
     private string $tipo;
     private string $Img;
-    private string $chave; 
+    private string $chave;
+    private string $endereco;
+    private string $sobre;
+    private string $sexo;
+    private string $habilidade;
 
 
     public function __construct()
@@ -19,7 +23,7 @@ class Usuario
 
     public function inserirUsuario(): void
     {
-        $sql = "INSERT INTO usuarios(nome, email, senha, tipo, Img, chave) VALUES(:nome, :email, :senha, :tipo, :Img, :chave)";
+        $sql = "INSERT INTO usuarios(nome, email, senha, tipo, Img, chave, endereco, sobre, sexo, habilidade) VALUES(:nome, :email, :senha, :tipo, :Img, :chave, :endereco, :sobre, :sexo, :habilidade)";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -29,6 +33,10 @@ class Usuario
             $consulta->bindParam(':tipo', $this->tipo, PDO::PARAM_STR);
             $consulta->bindParam(':Img', $this->Img, PDO::PARAM_STR);
             $consulta->bindParam(':chave', $this->chave, PDO::PARAM_STR);
+            $consulta->bindParam(':endereco', $this->endereco, PDO::PARAM_STR);
+            $consulta->bindParam(':sobre', $this->sobre, PDO::PARAM_STR);
+            $consulta->bindParam(':sexo', $this->sexo, PDO::PARAM_STR);
+            $consulta->bindParam(':habilidade', $this->habilidade, PDO::PARAM_STR);
 
             $consulta->execute();
         } catch (Exception $erro) {
@@ -224,64 +232,56 @@ class Usuario
     }
 
 
+/* GETTERS */
+
+    public function getId(): int { return $this->id; }
+    public function getNome(): string  { return $this->nome; }
+    public function getEmail(): string { return $this->email; }
+    public function getSenha(): string { return $this->senha; }
+    public function getTipo(): string { return $this->tipo; }
+    public function getImg(): string { return $this->Img; }
+    public function getChave(): string { return $this->chave; }
+    public function getEndereco():string{ return $this->endereco; }
+    public function getSobre():string { return $this->sobre; }
+    public function getSexo():string { return $this->sexo; }
+    public function getHabilidade():string {return $this->habilidade; }
 
 
-    public function getId(): int
-    {
-        return $this->id;
-    }
-    public function getNome(): string
-    {
-        return $this->nome;
-    }
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-    public function getSenha(): string
-    {
-        return $this->senha;
-    }
-    public function getTipo(): string
-    {
-        return $this->tipo;
-    }
-    public function getImg(): string
-    {
-        return $this->Img;
-    }
-    public function getChave(): string
-    {
-        return $this->chave;
-    }
 
+    /* SETTERS */
 
-    public function setId($id)
-    {
+    public function setId($id){
         $this->id = filter_var($id, FILTER_SANITIZE_NUMBER_INT);
     }
-    public function setNome($nome)
-    {
+    public function setNome($nome){
         $this->nome = filter_var($nome, FILTER_SANITIZE_STRING);
     }
-    public function setEmail($email)
-    {
+    public function setEmail($email){
         $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
     }
-    public function setSenha($senha)
-    {
+    public function setSenha($senha){
         $this->senha = $senha;
     }
-    public function setTipo($tipo)
-    {
+    public function setTipo($tipo){
         $this->tipo = filter_var($tipo, FILTER_SANITIZE_STRING);
     }
-    public function setImg($Img)
-    {
+    public function setImg($Img){
         $this->Img = filter_var($Img, FILTER_SANITIZE_STRING);
     }
-    public function setChave($chave)
-    {
+    public function setChave($chave){
         $this->chave = filter_var($chave, FILTER_SANITIZE_STRING);
     }
+    public function setEndereco($endereco){
+        $this->endereco = filter_var($endereco, FILTER_SANITIZE_STRING);
+    }
+    public function setSobre($sobre){
+        $this->sobre = filter_var($sobre, FILTER_SANITIZE_STRING);
+    }
+    public function setSexo($sexo){
+        $this->sexo = filter_var($sexo, FILTER_SANITIZE_STRING);
+    }
+    public function setHabilidade($habilidade){
+        $this->habilidade = filter_var($habilidade, FILTER_SANITIZE_STRING);
+    }
+
 }

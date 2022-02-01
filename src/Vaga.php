@@ -200,6 +200,7 @@ class Vaga
         }
         return $resultado;
     } // fim lerUmVaga
+    
     /* FIM VAGAS DE ACORDO COM CADA EMPRESA */
 
 
