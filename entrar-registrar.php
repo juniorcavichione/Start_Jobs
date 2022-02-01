@@ -207,6 +207,10 @@ if(isset($_SESSION['tipo'])) {
 									$usuario->setEmail($_POST['email-cadastro']);
 									$usuario->setSenha( $usuario->codificaSenha($_POST['senha-cadastro']));
 									$usuario->setTipo($_POST['tipo-cadastro']);
+									$usuario->setEndereco($_POST['endereco-cadastro']);
+									$usuario->setSobre($_POST['sobre-cadastro']);
+									$usuario->setSexo($_POST['sexo-cadastro']);
+									$usuario->setHabilidade($_POST['habilidade-cadastro']);
 									$usuario->setImg($Img);
 									$varnull = "NULL";
 									$usuario->setChave($varnull);
@@ -240,6 +244,21 @@ if(isset($_SESSION['tipo'])) {
 											<input type="text" class="form-control rounded-4" name="endereco-cadastro"
 												id="endereco-cadastro">
 											<label for="endereco-cadastro">Endereço</label>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control rounded-4" name="sobre-cadastro"
+												id="endereco-cadastro">
+											<label for="sobre-cadastro">Sobre</label>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control rounded-4" name="sexo-cadastro"
+												id="sexo-cadastro">
+											<label for="sexo-cadastro">Sexo</label>
+										</div>
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control rounded-4" name="habilidade-cadastro"
+												id="endereco-cadastro">
+											<label for="habilidade-cadastro">Habilidade</label>
 										</div>
 										<div class="form-floating mb-3">
 											<input type="password" class="form-control rounded-4" name="senha-cadastro"
