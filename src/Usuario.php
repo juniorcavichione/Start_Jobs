@@ -14,6 +14,7 @@ class Usuario
     private string $sobre;
     private string $sexo;
     private string $habilidade;
+    private string $telefone;
 
 
     public function __construct()
@@ -23,7 +24,7 @@ class Usuario
 
     public function inserirUsuario(): void
     {
-        $sql = "INSERT INTO usuarios(nome, email, senha, tipo, Img, chave, endereco, sobre, sexo, habilidade) VALUES(:nome, :email, :senha, :tipo, :Img, :chave, :endereco, :sobre, :sexo, :habilidade)";
+        $sql = "INSERT INTO usuarios(nome, email, senha, tipo, Img, chave, endereco, sobre, sexo, habilidade, telefone) VALUES(:nome, :email, :senha, :tipo, :Img, :chave, :endereco, :sobre, :sexo, :habilidade, :telefone)";
 
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -37,7 +38,7 @@ class Usuario
             $consulta->bindParam(':sobre', $this->sobre, PDO::PARAM_STR);
             $consulta->bindParam(':sexo', $this->sexo, PDO::PARAM_STR);
             $consulta->bindParam(':habilidade', $this->habilidade, PDO::PARAM_STR);
-
+            $consulta->bindParam(':telefone', $this->telefone, PDO::PARAM_STR);
             $consulta->execute();
         } catch (Exception $erro) {
             die("Erro: " . $erro->getMessage());
@@ -93,15 +94,6 @@ class Usuario
         }
         return;
     }
-
-
-
-
-
-
-
-
-
 
 /* 
     public function atualizaSenha():void {
@@ -245,6 +237,7 @@ class Usuario
     public function getSobre():string { return $this->sobre; }
     public function getSexo():string { return $this->sexo; }
     public function getHabilidade():string {return $this->habilidade; }
+    public function getTelefone():string {return $this->telefone; }
 
 
 
@@ -282,6 +275,9 @@ class Usuario
     }
     public function setHabilidade($habilidade){
         $this->habilidade = filter_var($habilidade, FILTER_SANITIZE_STRING);
+    }
+    public function setTelefone($telefone){
+        $this->telefone = filter_var($telefone, FILTER_SANITIZE_STRING);
     }
 
 }
