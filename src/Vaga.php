@@ -166,6 +166,24 @@ class Vaga
     } // fim lerUmVaga
     ////FIM INTERESSADOS
 
+    /* MOSTRA INTERESSADOS LIMIT 10 */
+
+    public function mostraInteressado(){
+        $sql = "SELECT * FROM interessados WHERE usuario_id = :id_usuario LIMIT 10";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            //$consulta->bindParam("id_vaga", $this->id_vaga, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetchall(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die("Erro: " . $erro->getMessage());
+        }
+        return $resultado;
+    } // fim lerUmVaga
+    ////FIM INTERESSADOS
+
 
     ////////////////// FRONT USUARIOS/////////////////
 
