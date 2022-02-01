@@ -2,17 +2,13 @@
 include_once('./includes/cabecalho.php');
 require_once "src/Acesso.php";
 require_once "src/Usuario.php";
-
 $usuario = new Usuario;
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-
 require './phpMailer/Exception.php';
 require './phpMailer/PHPMailer.php';
 require './phpMailer/SMTP.php';
-
 if(isset($_SESSION['tipo'])) {
 	echo "<script>alert('Voçe Ja está Logado ;-)')</script>";
 	echo "<script>window.open('index.php','_self')</script>";
