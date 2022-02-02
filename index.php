@@ -65,7 +65,7 @@
 					<p>
 						Exemplo 2: Carta de motivação de profissional sem experiência
 
-						Caro (nome da pessoa que vai ler a sua carta, se você tiver essa informação. Se não tiver, use apenas “Caros”),
+						Caro (nome da pessoa que vai ler a sua carta, se você tiver essa informação. Se não tiver, use apenas “Caros”), <br>
 
 						Meu nome é Antonia Luiza e escrevo para demonstrar meu interesse pela vaga de analista de marketing Jr da EmpresaY.
 
@@ -83,7 +83,7 @@
 
 					<p>Exemplo 3: carta de motivação para universidade
 
-						Caro (nome da pessoa que vai ler a sua carta, se você tiver essa informação. Se não tiver, use apenas “Caros”),
+						Caro (nome da pessoa que vai ler a sua carta, se você tiver essa informação. Se não tiver, use apenas “Caros”), <br>
 
 						Eu sou formado em Administração e descobri minha paixão pelo Marketing Online durante um estágio na EmpresaZ. O trabalho me deu uma visão ampla, mas superficial, da maioria dos canais de marketing digital. Agora, gostaria de aprofundar meu conhecimento sobre o tema participando do programa de Marketing Digital da UniversidadeAB.
 
