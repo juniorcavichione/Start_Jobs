@@ -5,7 +5,7 @@ $usuario = new Usuario;
 $vaga = new Vaga;
 $usuario->setId($_GET['id']);
 $listaUser = $usuario->lerUmUsuario();
-$linkzap = 'https://wa.me/55'.$listaUser['telefone'].'?text=Eu%20Gostaria%20de%20saber%20sobre%20Peças';
+$linkzap = 'https://wa.me/55'.$listaUser['telefone'].'?text=Eu%20Gostaria%20de%20saber%20sobre%20Disponibilidade';
 
 if(isset($_POST['contratar'])){
 	$vaga->setIdusuario($_GET['id']);
