@@ -154,8 +154,25 @@ class Vaga
             die("Erro: " . $erro->getMessage());
         }
         return $resultado;
-    } // fim lerUmVaga
+    } 
     ////FIM INTERESSADOS
+
+     /* FIM CONTA CONTRATADO PAINEL ADM*/
+     public function contaContratado()
+     {
+        $sql = "SELECT COUNT(*) FROM contratado WHERE empresa_id = :id_usuario";
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindParam(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            // $consulta->bindParam("id_vaga", $this->id_vaga, PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetchColumn();
+        } catch (Exception $erro) {
+            die("Erro: " . $erro->getMessage());
+        }
+        return $resultado;
+     } 
+     ////FIM CONTRATADO
 
     /* MOSTRAR TABELA INTERESSADOS POR PAINEL ADM LIMIT 3 */
 
@@ -230,7 +247,6 @@ class Vaga
         }
     }
     /* FIM FUNCAO CONTRATAR */
-
 
     ////////////////// FRONT USUARIOS/////////////////
     public function atualizarVaga()
