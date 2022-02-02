@@ -92,6 +92,23 @@
     line-height: normal;
 }
 
+.panel-azul {
+    border-color: #5c6ad8;
+}
+
+.panel-azul>.panel-heading {
+    color: #ffffff;
+    background-color: #5c6ad8;
+}
+
+.panel-azul>a {
+    color: #5c6ad8;
+}
+
+.panel-azul>a:hover {
+    color: #5c6ad8;
+}
+
 .panel-green {
     border-color: #5cd85c;
 }
