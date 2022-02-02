@@ -27,7 +27,7 @@
                 <li>
                     <span class="opener">Candidatos</span>
                     <ul>
-                        <li><a href="index.php?minha-vaga">Contratação</a></li>
+                        <li><a href="index.php?contratacao">Contratação</a></li>
                         <li><a href="index.php?listar-pretedente">Listar candidatos</a></li>
                         <li><a href="index.php?editar-vaga">Editar</a></li>                        
                     </ul>
