@@ -90,8 +90,6 @@
 						Muito obrigada pela atenção,
 						Francisco Gama. </p>
 				</section>
-				<hr>
-				
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php'); ?>
