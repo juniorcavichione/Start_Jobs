@@ -91,8 +91,7 @@
 						Francisco Gama. </p>
 				</section>
 				<hr>
-				<!-- VAGAS  BACK-END -->
-				<h2>Vagas</h2>
+				
 			</div>
 		</div>
 		<?php include_once('./includes/sidebar.php'); ?>
