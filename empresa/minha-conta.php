@@ -11,6 +11,7 @@
 
 	$contaprete = $vaga->ContaInteresse();
 	$contavaga = $vaga->ContaVaga();
+	$contacontrato = $vaga->contaContratado();
 
 	$vaga->setIdusuario($_SESSION['id']);
 	$tabinter = $vaga->mostraInteressados();
@@ -47,7 +48,7 @@
 
 									<div class="col-xs-9 text-right">
 										<!-- col-xs-9 text-right begin -->
-										<div class="huge"> 8 </div>
+										<div class="huge"> <?php echo $contacontrato;?></div>
 
 										<div> Contratados </div>
 
@@ -149,7 +150,7 @@
 										<!-- col-xs-9 text-right begin -->
 										<div class="huge"> <?php echo $contavaga;?> </div>
 
-										<div> Vagas Categorias </div>
+										<div> Vagas  </div>
 
 									</div><!-- col-xs-9 text-right finish -->
 
@@ -198,7 +199,7 @@
 										<!-- col-xs-9 text-right begin -->
 										<div class="huge"> 2 </div>
 
-										<div> Pedidos </div>
+										<div> Cancelados </div>
 
 									</div><!-- col-xs-9 text-right finish -->
 
