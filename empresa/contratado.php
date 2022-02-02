@@ -13,8 +13,8 @@
     						<h4>Adriano Baram</h4>
     						<p class="text-secondary mb-1">Full Stack Developer</p>
     						<p class="text-muted font-size-sm">São Paulo, Brasil BR</p>
-    						<button class="btn btn-primary">Follow</button>
-    						<button class="btn btn-outline-primary">Ligar</button>
+    						<button class="button big">Whatsapp</button>
+    						<button class="button big">Ligar</button>
     					</div>
     				</div>
     			</div>
@@ -97,13 +97,7 @@
                     <div class="col-sm-9 text-secondary">
                       Bay Area, San Francisco, CA
                     </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                    </div>
-                  </div>
+                  </div>               
                 </div>
               </div>
             </div>
